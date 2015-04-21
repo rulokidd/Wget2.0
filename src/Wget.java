@@ -29,21 +29,21 @@ public class Wget {
 	 */
 	public static void BuscarArgs (String[] args, boolean[] filtres) {
 		
-		int i = args.length;
+		//int i = args.length;
 		
-		while (i > 0) {
+		//while (i > 0) {
 
-			if (args[i].equals("-a")) {
+			if (args[0].equals("-a")) {
 				filtres[0]=true; 
 			}
-			if (args[i].equals("-z")) {
+			if (args[1].equals("-z")) {
 				filtres[1]=true; 
 			}
-			if (args[i].equals("-gz")) {
-				filtres[2]=true; 
+			if (args[2].equals("-gz")) {
+				filtres[2]=true;
 			}
-			i--;
-		}
+			//i--;
+		//}
 	}
 	/**
 	 * El metode main() llegira les urls, de l'arxiu urls.txt, buscara els filtres 
