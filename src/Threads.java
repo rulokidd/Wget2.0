@@ -4,7 +4,13 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
+/**
+ * 
+ * @author Albert Pineda i Raul Palencia
+ * Classe Thread que hereda de la classe Thread de Java. El funcionament d'aquesta classe
+ * es el de poder descarregar les urls de manera individual i no de manera sequencial com
+ * es feien a les primeres versions de la aplicacio Wget.
+ */
 public class Threads extends Thread {
 	
 	String url;
