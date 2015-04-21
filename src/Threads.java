@@ -20,6 +20,7 @@ public class Threads extends Thread {
 	}
 	
 	public String possarNom(String url, boolean[]filtres) {
+		String nom;
 		
 		nom = url.substring(url.lastIndexOf("/"));
 		//System.out.println(url);
@@ -95,8 +96,6 @@ public class Threads extends Thread {
 			existeix=true; 
 		}
 		if (filtres[0]==true && filtres[1]==false && filtres[2]==false){  //filtre ascii
-			
-			
 			existeix=true; 
 		}
 		if (filtres[0]==false && filtres[1]==true && filtres[2]==false){  //filtre zip
