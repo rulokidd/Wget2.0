@@ -60,8 +60,8 @@ public class Wget {
 		filtres[2]=false;
 
 		try {
-			String url, nom;
-			int cont = 0;
+			String url;
+			//int cont = 0;
 			BufferedReader fr = new BufferedReader(new FileReader(
 					"/users/rulo13_15/Documents/workspace/urls.txt"));
 			
@@ -73,7 +73,7 @@ public class Wget {
 				 * utilitzem new Wget().downloadURL(url), cont++
 				 */
 
-				cont++;
+				//cont++;
 				
 				/*nom = url.substring(url.lastIndexOf("/"));
 				System.out.println(url);
