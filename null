@@ -1,0 +1,921 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+        <title>dEIC Homepage</title>
+  
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta name="verify-v1" content="Jdaac1+fpV5HZiRHeTEzSni7H0h0wumngsw05dAubf4=" >
+<meta name="keywords" content="deic, departament, enginyeria, informacio, comunicacions">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Pàgina principal del Departament d'Enginyeria de la Informació i les Comunicacions (dEIC) de la Universitat Autònoma de Barcelona (UAB)">
+
+<link REL="SHORTCUT ICON" HREF="../images/deic.png">
+<link rel="STYLESHEET" type="text/css" href="../css/common.css">
+<style type="text/css">
+	
+select
+{ 
+	font-size: 13px; 
+	font-family: Verdana,sans-serif; 
+	color: gray; 
+}
+
+input.boto
+{
+	background-color:#AAAAAA; 
+	color: #FFFFFF;
+	border-style: solid;
+	border-color: #DDDDDD;
+}
+
+hr {
+	padding: 0;
+	border: solid #f8f6f5;
+	border-width: 1px 0 0 0;
+	color: #f8f6f5;
+	height: 0px;
+}
+
+hr.bottom {
+	padding: 0;
+	border: solid #808080;
+	border-width: 1px 0 0 0;
+	color: #808080;
+	height: 0px;
+}
+
+td {
+	overflow:hidden;
+}
+
+</style>
+	
+<script type="text/javascript">
+function formHandler(form)
+{
+	var URL = form.site.options[form.site.selectedIndex].value;
+	window.location.href = URL;
+}
+
+/* 
+  ------------------------------------
+  PVII Menu CSS Express Drop-Down Menu
+  by Project Seven Development
+  www.projectseven.com
+  ------------------------------------
+*/
+function dropdownMenu()
+{
+ //v1.1.0.2 by PVII-www.projectseven.com
+ if(navigator.appVersion.indexOf("MSIE")==-1){return;}
+ var i,k,g,lg,r=/\s*p7hvr/,nn='',c,cs='p7hvr',bv='p7menubar';
+ for(i=0;i<10;i++){g=document.getElementById(bv+nn);if(g){
+ lg=g.getElementsByTagName("LI");if(lg){for(k=0;k<lg.length;k++){
+ lg[k].onmouseover=function(){c=this.className;cl=(c)?c+' '+cs:cs;
+ this.className=cl;};lg[k].onmouseout=function(){c=this.className;
+ this.className=(c)?c.replace(r,''):'';};}}}nn=i+1;}
+}
+</script>
+
+<script src="../js/floatdiv.js" type="text/javascript"></script>
+
+</head>
+
+<body bgcolor="#ffffff" onLoad="dropdownMenu()">
+
+
+<table align="center" width="800" cellspacing="0" cellpadding="0" border="0">
+	<tr valign="bottom">
+		<td colspan="2">
+
+			<!-- Logo comun para todo, solo varian los enlaces -->
+			<div style="position:relative; z-index:1;">
+				<img src="../../images/deic.png" width="800" height="80" border="0" alt="" usemap="#deicmap">
+				<map name="deicmap">
+					<!-- Idiomas (en version anterior estaban pensados para cada caso -->
+					<!--<area shape="rect" coords="0,0,65,22" href="../index.php?idioma=2">
+					<area shape="rect" coords="65,0,125,22" href="../index.php?idioma=1">-->
+					<!-- Logo UAB -->
+					<area shape="rect" coords="702,33,790,75" href="http://www.uab.cat" alt="" title="" target="_blank">
+					<area shape="rect" coords="9,33,118,75" href="../index.php?idioma=0" alt="" title="" target="_parent">
+				</map>
+			</div>
+
+				<div class="languages">
+				<!--<a href="../index.php?idioma=2" onFocus="this.blur()">English</a> |
+				<a href="../index.php?idioma=1" onFocus="this.blur()">Espa&ntilde;ol</a>-->
+				<a href="?idioma=2" onFocus="this.blur()">English</a> |
+				<a href="?idioma=1" onFocus="this.blur()">Espa&ntilde;ol</a>
+			</div>
+			<div class="title">
+				<font color="#cc9900">departament</font> <br>
+				<font color="#a24d1a">d'Enginyeria de la Informació i de les Comunicacions</font>
+			</div>
+
+
+		
+		</td> 
+	</tr>
+	<tr>
+		<td valign="top" width="25%">
+
+		
+
+
+<!-- El siguiente codigo comentado seria necesario de no estar incluido "menu.php" en otra pagina -->
+<!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<title>Menu</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+</head>
+
+<body>
+-->
+
+<!--<table class="menu" width="190em" cellspacing="0" cellpadding="5">-->
+<table class="menu" width="130px" cellspacing="0" cellpadding="5">
+	<tr valign="top" >
+		<td>
+			<br>&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../index.php?idioma=0"><strong>Inici</strong></a>
+			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../info/info.php?idioma=0"><strong>Informació</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../personal/professors.php?idioma=0"><strong>Personal</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../docencia/docencia.php?idioma=0"><strong>Docència</strong></a>  	         
+			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../recerca/recerca.php?idioma=0"><strong>Recerca</strong></a>				
+			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../activitats/activitats.php?idioma=0"><strong>Activitats</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../recursos/ofertes.php?idioma=0"><strong>Recursos</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="https://deic.uab.cat/entrada.php3" target="_blank" >Intranet</a>
+		</td>
+	</tr>
+
+
+	<!-- Los siguientes logos no seran visibles en este menu; se dejan los enlaces a los grupos de investigacion en la parte central -->
+	<!-- Links de recerca -->
+	<!--
+	<tr>
+		<td align="center"><a href="http://www.uab.cat" target=_blank><img src="../images/logoUAB.png"  width="50%" heigh="50%" border=0 alt="UAB" title="UAB"></a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="http://ccg.uab.es" target=_blank><img src="../images/ccg_small.png"  width="60%" heigh="60%"  border=0 alt="CCG" title="CCG"></a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="http://senda.uab.es" target=_blank><img src="../images/senda.png"  width="40%" heigh="40%"  border=0 alt="Senda" title="SENDA"/></a></td>	
+	</tr>
+	<tr>
+		<td align="center"><a href="http://gici.uab.es" target=_blank><img src="../../images/lhyper.png" width="50%" heigh="50%" border=0 alt="gici" title="GICI"></a></td>
+	</tr>
+	-->
+	<!-- En su lugar, se ponen las entidades que apoyan la investigacion -->
+	<tr>
+ 		<td align="center"><strong>Amb el suport de:</strong><br></td>
+	</tr>
+	<tr>
+		<td align="center">
+			<img src="../images/suport.png" border=0 alt="Entitats que donen suport a la investigació" title="Entitats que donen suport a la investigació" usemap="#suportmap">
+			<map name="suportmap">
+				<area shape="rect" coords="3,3,53,53" href="http://www.gencat.cat/agaur" alt="AGAUR" title="AGAUR">
+				<area shape="rect" coords="56,2,108,55" href="http://www.europa.eu" alt="Unió europea" title="Unió europea">
+				<area shape="rect" coords="0,57,109,82" href="http://www.mityc.es" alt="Ministerio de industria, turismo y comercio" title="Ministerio de industria, turismo y comercio">
+				<area shape="rect" coords="0,86,108,112" href="http://www.micinn.es" alt="Ministerio de ciencia e innovación" title="Ministerio de ciencia e innovación">
+			</map>
+		</td>	
+	</tr>
+
+
+	<!--<tr>
+	 <td align="center"><a href="../docencia/pfc.html"><img src="../images/pfc.jpg" width="50%" heigh="50%"   border=0 alt="pfc" title="PFC"></a></td>
+	</tr>-->
+
+	<tr>
+ 		<td align="center"><strong>Cerca al dEIC:</strong></td>
+	</tr>
+		<!-- Fi Links de recerca -->
+	<tr>
+		<td align="center">
+			<!-- SiteSearch Google -->
+			<FORM method=GET action="http://www.google.com/custom">
+				<input type=hidden name=hl value="ca">
+				<input type=hidden name=ie value="ISO-8859-15">
+				<input type=hidden name=cof value="L:http://deic.uab.es/img/ccd-google.jpg;">
+				<input type=hidden name=iso value="ISO-8859-15">
+				<input type=hidden name=domains value="deic.uab.es">
+				<input type=hidden name=sitesearch value="deic.uab.es">
+				<input type=hidden name=btnG value="Cerca">	
+				<INPUT TYPE=text name=q size=15 maxlength=255 value="">
+				<A HREF="http://www.google.com/custom?q=&amp;cof=L:../img/ccd-google.jpg;http://deic.uab.es;&amp;domains=deic.uab.es&amp;sitesearch=deic.uab.es&amp;sa=Search%2BGoogle&amp;hl=ca"><IMG SRC="../images/google.gif"  border="0" ALT="dEIC-Google" title="Type text, press Enter"></A>
+			</FORM>
+			<!-- Fi SiteSearch Google -->
+		</td>
+	</tr>
+</table>
+
+<!-- El siguiente codigo comentado seria necesario de no estar incluido "menu.php" en otra pagina -->
+<!--
+</body>
+</html>
+-->
+
+		</td>
+		<td valign="top" width="*">
+		<!--<table align="right">
+			<tr>
+				<td>-->
+
+				<!-- Quick links (V2) -->
+				<div id="menuwrapper" class="menuwrapper">
+					<ul id="p7menubar">
+					<li><a class="trigger" href="#">Quick links</a>
+					<ul>
+					<li><a href="../index.php?idioma=0" onFocus="this.blur()">Inici</a></li>
+					<li><a href="../personal/professors.php?idioma=0" onFocus="this.blur()">Personal</a></li>
+					<li><a href="../docencia/assignatures.php?idioma=0&amp;Centre1=1" onFocus="this.blur()">Assig-EE (Bellaterra)</a></li>
+					<li><a href="../docencia/assignatures.php?idioma=0&amp;Centre2=1" onFocus="this.blur()">Assig-EE (Sabadell)</a></li>
+					<li><a href="../docencia/practica.php" onFocus="this.blur()">Pràctiques</a></li>
+					<li><a href="../forum1/?idioma=0" onFocus="this.blur()">Forums</a></li>
+					<li><a href="../recerca/publicacions.php?idioma=0" onFocus="this.blur()">Publicacions</a></li>
+					<li><a href="../activitats/seminari.php?idioma=0" onFocus="this.blur()">Seminari</a></li>
+					<li><a href="../recursos/documents.php?idioma=0" onFocus="this.blur()">Recursos</a></li>
+					<li><a href="../recursos/ofertes.php?idioma=0" onFocus="this.blur()">Ofertes de feina</a></li>
+					</ul>
+					</li>
+					</ul>
+					<br class="clearit">
+				</div>
+
+				<!-- Quick links (V1) -->
+				<!--
+				<form name="form">
+				<select name="site" onChange="formHandler(this.form)">
+					<option value=""><b>Quick links</b>
+					<option value="../index.php?idioma=0">Inici					-->
+					<!-- <option value="../info/info.php?idioma=">-->
+					<!--
+					<option value="../personal/professors.php?idioma=0">Personal					<option value="../docencia/assignatures.php?idioma=0&Centre1=1">Assig-EE (Bellaterra)					<option value="../docencia/assignatures.php?idioma=0&Centre2=1">Assig-EE (Sabadell)					<option value="../docencia/practica.php">Pràctiques					<option value="../forum1/?idioma=0">Forums					<option value="../recerca/publicacions.php?idioma=0">Publicacions					<option value="../activitats/seminari.php?idioma=0">Seminari					<option value="../recursos/documents.php?idioma=0">Recursos					<option value="../recursos/ofertes.php?idioma=0">Ofertes de feina
+				</select>
+				</form>
+				-->					
+
+								<!--</td>
+			</tr>
+		</table>-->
+		<table width="*" cellspacing="0" cellpadding="0" border="0">
+
+ 
+
+
+<!-- ?? -->
+<tr><!--Nuevo-->
+	<td align="left"></td>
+</tr><!--Nuevo-->
+
+	<!-- Logo grande del departamento -->
+	<tr>    		
+		<td align="center">
+		<img src="./images/ImatgeDEIC-3.jpg" width="440" height="280" border="0" alt="Grup dEIC" title="Grup dEIC">
+		</td>
+	</tr>
+
+<!--<tr>-->
+	<tr align="center">
+		<td align="center">
+			<br>
+
+			<!-- El tamanho de la tabla queda fijo, no aumenta -->
+			<table class="recerca" cellspacing="3" cellpadding="1" style="table-layout:fixed">
+
+	<!-- Consulta a la BBDD para obtener las palabras clave (keywords) asociadas a cada grupo de investigacion -->
+	
+			<tr>
+				<td colspan="3" bgcolor="#993400" class="title">
+					<table width="90%" cellpadding="0" cellspacing="0" border="0" style="padding: 0em 1em 0em 0em;" align="right">
+						<tr>
+						<td style="text-align:center" class="title">
+
+							Grups de recerca						</td>
+						<td style="text-align:right" class="title" align="right">
+							<!--<a href="../recerca/rssFeed.php"><img src="./images/rss.gif" width="46px" height="12px" border="0"></a>-->
+							<!--<a href="../recerca/rssFeed.php"><img src="./images/rss.gif" width="50px" height="14px" border="0"></a>-->
+							<a href="../recerca/rssFeed.php?idioma=0">
+								<img src="./images/rssMini.gif" alt="RSS" title="RSS" width="16px" height="16px" border="0"></a>
+						</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr align="center">
+			<td colspan="3">
+				<strong><em>
+
+					Els següents grups estan integrats en <a href="http://www.recerca.uab.es/grupsuab/" target="_blank">SGR</a>:
+				</em></strong>
+			</td>
+			</tr>
+
+			<tr align="left">
+				<td width=".100/3.%"><div id="divRecerca1" class="divRecerca"><div id="divRecercaContent1Close" align="right" style="margin-top:0px;margin-right:0px;">
+							<a onclick="HideContent('divRecerca1'); return false;"
+							   href="javascript:HideContent('divRecerca1')">
+							[X]
+							</a>
+							</div><div id="divRecercaContent1" align="left" style="margin-top:0px;margin-right:0px"><b>Information&nbsp;coding</b><br><strong>&nbsp;&nbsp;Bent&nbsp;functions</strong><br>&nbsp;&nbsp;&nbsp;Error-correcting&nbsp;codes<br>&nbsp;&nbsp;Completely&nbsp;Regular&nbsp;Codes<br>&nbsp;&nbsp;Perfect&nbsp;Codes<br>&nbsp;&nbsp;Propelinear&nbsp;Codes<br>&nbsp;&nbsp;Z2Z4-linear&nbsp;Codes<br>&nbsp;&nbsp;network&nbsp;coding<br><b>Distributed&nbsp;storage</b><br>&nbsp;&nbsp;regenerating&nbsp;codes<br>&nbsp;&nbsp;data&nbsp;authentication<br>&nbsp;&nbsp;data&nbsp;integrity<br>&nbsp;&nbsp;data&nbsp;hiding<br><b>Magma&nbsp;software&nbsp;system</b><br>&nbsp;&nbsp;Algorithms&nbsp;for&nbsp;nonlinear&nbsp;codes<br>&nbsp;&nbsp;Algorithms&nbsp;for&nbsp;Z2Z4-linear&nbsp;codes<br><br><br></div><a href="./recerca/publicacionsCCSG.php" target="_blank">Publicacions</a><br>url: <a href="http://ccg.uab.es" target="_blank">http://ccg.uab.es</a><br></div><a id="divRecercaContent1Link"
+							   onclick="ReverseContentDisplay('divRecerca1',3); return false;"
+							href="javascript:ReverseContentDisplay('divRecerca1',3);">CCSG</a></td><td width=".100/3.%"><div id="divRecerca2" class="divRecerca"><div id="divRecercaContent2Close" align="right" style="margin-top:0px;margin-right:0px;">
+							<a onclick="HideContent('divRecerca2'); return false;"
+							   href="javascript:HideContent('divRecerca2')">
+							[X]
+							</a>
+							</div><div id="divRecercaContent2" align="left" style="margin-top:0px;margin-right:0px"><b>Digital&nbsp;Image&nbsp;Consulting</b><br><b>Data&nbsp;Compression</b><br>&nbsp;Lossless&nbsp;and&nbsp;Lossy&nbsp;Coding<br>&nbsp;Multi-dimensional&nbsp;and&nbsp;ROI&nbsp;coding<br>&nbsp;Interactive&nbsp;coding&nbsp;/&nbsp;transmission<br>&nbsp;Rate&nbsp;control&nbsp;techniques<br>&nbsp;Region&nbsp;of&nbsp;Interest&nbsp;Coding<br><b>Standards</b>&nbsp;and&nbsp;<b>Applications</b><br>&nbsp;ISO/IEC&nbsp;JPEG2000<br>&nbsp;CCSDS&nbsp;recommendations<br>&nbsp;Hyperspectral&nbsp;and&nbsp;Medical&nbsp;imaging<br><b>Software&nbsp;Developments</b><br>&nbsp;JPIP,&nbsp;JPEG2000,&nbsp;CCSDS&nbsp;Image&nbsp;Data&nbsp;Compression,&nbsp;Spectral&nbsp;Transform<br>&nbsp;Pairwise&nbsp;Orthogonal&nbsp;Transform,&nbsp;File&nbsp;Format&nbsp;Converter,&nbsp;ieMetrics,&nbsp;...<br><br><br></div><a href="./recerca/publicacionsGiCi.php" target="_blank">Publicacions</a><br>url: <a href="http://gici.uab.es" target="_blank">http://gici.uab.es</a><br></div><a id="divRecercaContent2Link"
+							   onclick="ReverseContentDisplay('divRecerca2',3); return false;"
+							href="javascript:ReverseContentDisplay('divRecerca2',3);">GiCi</a></td><td width=".100/3.%"><div id="divRecerca3" class="divRecerca"><div id="divRecercaContent3Close" align="right" style="margin-top:0px;margin-right:0px;">
+							<a onclick="HideContent('divRecerca3'); return false;"
+							   href="javascript:HideContent('divRecerca3')">
+							[X]
+							</a>
+							</div><div id="divRecercaContent3" align="left" style="margin-top:0px;margin-right:0px"><b>Security</b><br>&nbsp;&nbsp;Security&nbsp;and&nbsp;Privacy<br>&nbsp;&nbsp;Network&nbsp;vulnerabilities<br><b>Mobile&nbsp;Agents</b><br>&nbsp;&nbsp;Itinerary&nbsp;and&nbsp;Code&nbsp;Protection<br>&nbsp;&nbsp;Secure&nbsp;Applications<br><b>Delay&nbsp;Tolerant&nbsp;Networking</b><br>&nbsp;&nbsp;Mobile&nbsp;Agent&nbsp;Based&nbsp;Dynamic&nbsp;Routing<br>&nbsp;&nbsp;Aerospace&nbsp;and&nbsp;Emergency&nbsp;Applications<br>&nbsp;&nbsp;Sensor&nbsp;Networks<br><br><br></div><a href="./recerca/publicacionsSeNDA.php" target="_blank">Publicacions</a><br>url: <a href="http://senda.uab.es" target="_blank">http://senda.uab.es</a><br></div><a id="divRecercaContent3Link"
+							   onclick="ReverseContentDisplay('divRecerca3',3); return false;"
+							href="javascript:ReverseContentDisplay('divRecerca3',3);">SeNDA</a></td></tr>
+			<tr align="left"><td><b>Information coding</b><br>&nbsp;&nbsp;Bent functions<br>&nbsp;&nbsp;Completely Regular Codes<br>&nbsp;&nbsp;Perfect Codes<br>&nbsp;&nbsp;Propelinear Codes<br>&nbsp;&nbsp;Z2Z4-linear Codes<br><b>Distributed storage</b><br>&nbsp;&nbsp;regenerating codes<br>&nbsp;&nbsp;data hiding<br><b>Magma software system</b><br>&nbsp;&nbsp;Algorithms for nonlinear codes<br>&nbsp;&nbsp;Algorithms for Z2Z4-linear codes<br></td><td><b>Digital Image Consulting</b><br><b>Data Compression</b><br>&nbsp;Lossless and Lossy Coding<br>&nbsp;Multi-dimensional and ROI coding<br>&nbsp;Interactive coding&nbsp;/&nbsp;transmission<br><b>Standards</b>&nbsp;and&nbsp;<b>Applications</b><br>&nbsp;ISO/IEC JPEG2000<br>&nbsp;CCSDS recommendations<br>&nbsp;Hyperspectral and Medical imaging<br><b>Software Developments</b><br></td><td><b>Security</b><br>&nbsp;&nbsp;Security and Privacy<br>&nbsp;&nbsp;Network vulnerabilities<br><b>Mobile Agents</b><br>&nbsp;&nbsp;Itinerary and Code Protection<br>&nbsp;&nbsp;Secure Applications<br><b>Delay Tolerant Networking</b><br>&nbsp;&nbsp;Mobile Agent Based Dynamic Routing<br>&nbsp;&nbsp;Aerospace and Emergency Applications<br>&nbsp;&nbsp;Sensor Networks<br></td>			</tr>
+
+		</table>
+
+		</td>
+		</tr>
+
+		<!--</tr>
+	   	<tr valign="top" >
+	</td>
+
+	</tr>-->
+<!--</tr>-->
+
+
+
+</table>
+</td>
+</tr>
+
+<tr> 
+    <td vAlign=bottom align="center" colSpan=2>  
+      <div align="center"> 
+      <HR width="90%" noShade SIZE=1 class="bottom">
+	    <a class="mini" href="../index.php?idioma=2">Home</a> | <a class="mini" href="../info/contactar.php?idioma=2">Contact</a> <!-- | <a class="mini" href="../info/sobre.php?idioma=">--> <!--</a>--> | <a class="mini" href="../info/mapa.php?idioma=2">Web map</a> <br>
+        <font size="1">Dilluns, 20 d'abril de 2015. &copy; 2006, dEIC. 
+		Administrator:  <img src="../inc/email2imageId.php?id=0" alt="E-mail"></font></div> 
+    </td> 
+</tr>
+</table>
+
+
+</body>
+</html>
+oogle.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}
+</script></div></body></html> even Flash movies. You can also output any text, such as XHTML and 
+XML.</p>
+<hr>
+
+<h2>Why PHP?</h2>
+<ul>
+  <li>PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)</li>
+  <li>PHP is compatible with almost all servers used today (Apache, IIS, etc.)</li>
+  <li>PHP supports a wide range of databases</li>
+  <li>PHP is free. Download it from the official PHP resource: <a target="_blank" href="http://www.php.net/">www.php.net</a></li>
+  <li>PHP is easy to learn and runs efficiently on the server side</li>
+</ul>
+<br>
+
+<div class="chapter">
+<div class="prev"><a class="chapter" href="default.asp">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="php_install.asp">Next Chapter &raquo;</a></div>
+</div>
+
+     <br>
+    </div>
+   </div>
+   <div class="col-lg-2 col-md-2 col-sm-12">
+    <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sidesection" style="margin-top:15px;padding:0;overflow:visible;">
+      <div id="skyscraper">
+       <div id="div-gpt-ad-1422003450156-5" style="min-height:600px;">
+        <script>
+         googletag.cmd.push(function() {
+         googletag.display('div-gpt-ad-1422003450156-5');
+         });
+        </script> 
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sidesection" style="padding:0;overflow:hidden;">
+      <h3>W3SCHOOLS EXAMS</h3>
+      <a target="_blank" href="http://www.w3schools.com/cert/default.asp">HTML, CSS, JavaScript, PHP, jQuery, and XML Certifications</a>
+     </div>
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sidesection">
+      <h3>SHARE THIS PAGE</h3>
+      <div class="sharethis">
+       <script>
+       <!--
+       try{
+       loc=location.pathname;
+       if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"default.asp";
+       txt='<a href="http://www.facebook.com/sharer.php?u=http://www.w3schools.com'+loc+'" target="_blank" title="Facebook"><span class="share sharefacebook social social-facebook"></span></a>';
+       txt=txt+'<a href="http://twitter.com/home?status=Currently reading http://www.w3schools.com'+loc+'" target="_blank" title="Twitter"><span class="share sharetwitter social social-twitter"></span></a>';
+       //txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20http://www.w3schools.com'+loc+'" target="_blank"  title="E-mail"><span class="share shareemail glyphicons glyphicons-envelope"></span></a>';
+       txt=txt+'<a href="https://plus.google.com/share?url=http://www.w3schools.com'+loc+'" target="_blank" title="Google+"><span class="share sharegoogle social social-google-plus"></span></a>';
+       document.write(txt);
+       }
+       catch(e) {}
+       //-->
+       </script>
+      </div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sidesection" style="padding:0;margin-top:0;overflow:hidden;">
+      <h3>COLOR PICKER</h3>
+      <a href="/tags/ref_colorpicker.asp">
+      <img src="/images/colorpicker.gif" alt="colorpicker"></a>
+     </div>
+    </div>
+   </div>
+  </div>
+  
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-12">
+
+<hr style="margin-bottom:0;">
+<div style="overflow:hidden;">
+<!-- BottomMediumRectangle -->
+<div id='div-gpt-ad-1422003450156-0'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
+</script>
+</div>
+<!-- RightBottomMediumRectangle -->
+<div id='div-gpt-ad-1422003450156-3'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
+</script>
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+
+    <div class="footer">
+     <hr style="margin-bottom:14px;margin-top:0px;">
+     <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+	   <a href="" onclick="displayError();return false" style="white-space:nowrap;">REPORT ERROR</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+       <a href="" target="_blank" onclick="printPage();return false;">PRINT PAGE</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+       <a href="/forum/default.asp" target="_blank">FORUM</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+	   <a href="/about/default.asp" target="_top">ABOUT</a>
+      </div>
+     </div>
+     <hr style="margin-bottom:2px;margin-top:14px;">
+     <div class="container-fluid jumbotron" id="err_form">
+      <button type="button" class="close" onclick="hideError()"><span>&times;</span></button>
+      <h2>Your Suggestion:</h2>
+      <form role="form">
+      <div class="form-group">
+        <label for="err_email">Your Email:</label>
+        <input class="form-control" type="email" id="err_email" name="err_email" />
+      </div>
+      <div class="form-group">
+        <label for="err_email">Page address:</label>
+        <input class="form-control" type="text" id="err_url" name="err_url" disabled="disabled" />
+      </div>
+      <div class="form-group">
+        <label for="err_email">Description:</label>
+        <textarea rows="10" class="form-control" id="err_desc" name="err_desc" style="max-width:100%;"></textarea>
+      </div>
+      <div class="form-group">        
+        <button type="button" class="btn btn-default" onclick="sendErr()">Submit</button>
+      </div>
+      </form>
+     </div>
+     <div class="container-fluid jumbotron" id="err_sent" style="clear:both;">
+      <button type="button" class="close" onclick="hideSent()"><span>&times;</span></button>
+      <h2>Thank You For Helping Us!</h2>
+      <p>Your message has been sent to W3Schools.</p>
+     </div>
+         
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="top10">
+                  <h3>Top 10 Tutorials</h3>
+                  <a href="/html/default.asp">HTML Tutorial</a><br>
+                  <a href="/css/default.asp">CSS Tutorial</a><br>
+                  <a href="/js/default.asp">JavaScript Tutorial</a><br>
+                  <a href="/sql/default.asp">SQL Tutorial</a><br>
+                  <a href="/php/default.asp">PHP Tutorial</a><br>
+                  <a href="/jquery/default.asp">jQuery Tutorial</a><br>
+                  <a href="/bootstrap/default.asp">Bootstrap Tutorial</a><br>
+                  <a href="/angular/default.asp">Angular Tutorial</a><br>
+                  <a href="/aspnet/default.asp">ASP.NET Tutorial</a><br>
+                  <a href="/xml/default.asp">XML Tutorial</a><br>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="top10">
+                  <h3>Top 10 References</h3>
+                  <a href="/tags/default.asp">HTML Reference</a><br>
+                  <a href="/cssref/default.asp">CSS Reference</a><br>
+                  <a href="/jsref/default.asp">JavaScript Reference</a><br>
+                  <a href="/browsers/default.asp">Browser Statistics</a><br>
+                  <a href="/jsref/dom_obj_document.asp">HTML DOM</a><br>
+                  <a href="/php/php_ref_array.asp">PHP Reference</a><br>
+                  <a href="/jquery/jquery_ref_selectors.asp">jQuery Reference</a><br>
+                  <a href="/tags/ref_colornames.asp">HTML Colors</a><br>
+                  <a href="/charsets/default.asp">HTML Character Sets</a><br>
+                  <a href="/dom/dom_nodetype.asp">XML DOM</a><br>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="top10">
+                  <h3>Top 10 Examples</h3>
+                  <a href="/html/html_examples.asp">HTML Examples</a><br>
+                  <a href="/css/css_examples.asp">CSS Examples</a><br>
+                  <a href="/js/js_examples.asp">JavaScript Examples</a><br>
+                  <a href="/js/js_dom_examples.asp">HTML DOM Examples</a><br>
+                  <a href="/php/php_examples.asp">PHP Examples</a><br>
+                  <a href="/jquery/jquery_examples.asp">jQuery Examples</a><br>
+                  <a href="/xml/xml_examples.asp">XML Examples</a><br>
+                  <a href="/dom/dom_examples.asp">XML DOM Examples</a><br>
+                  <a href="/asp/asp_examples.asp">ASP Examples</a><br>
+                  <a href="/svg/svg_examples.asp">SVG Examples</a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="top10">
+                  <h3>Web Certificates</h3>
+                  <a href="/cert/default.asp">HTML Certificate</a><br>
+                  <a href="/cert/default.asp">HTML5 Certificate</a><br>
+                  <a href="/cert/default.asp">CSS Certificate</a><br>
+                  <a href="/cert/default.asp">JavaScript Certificate</a><br>
+                  <a href="/cert/default.asp">jQuery Certificate</a><br>
+                  <a href="/cert/default.asp">PHP Certificate</a><br>
+                  <a href="/cert/default.asp">XML Certificate</a><br>
+                  
+                </div>
+              </div>        
+            </div>        
+     <hr>
+    </div>
+     <div class="footer">
+       W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
+       Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+       While using this site, you agree to have read and accepted our <a href="/about/about_copyright.asp">terms of use</a>,
+       <a href="/about/about_privacy.asp">cookie and privacy policy</a>.
+       <a href="/about/about_copyright.asp">Copyright 1999-2015</a> by Refsnes Data. All Rights Reserved.<br><br>
+       <a href="http://www.w3schools.com">
+       <img style="width:150px;height:28px;border:0" src="/images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+     </div>
+
+   </div>
+  </div>
+ </div>
+
+</div>
+</div>
+<div id='w3dropdowntutorials' class='w3DropdownMenu container-fluid'>
+<div class="w3DropdownInner">
+<button type="button" class="xclose w3DropdownClose" onclick="hideDropdownMenu()" title="Close"><span>&times;</span></button>
+<br>
+<div class="w3DropdownItem">
+<h3>HTML/CSS</h3>
+<a href='/html/default.asp'>HTML Tutorial</a>
+<a href='/html/html5_intro.asp'>HTML5 Tutorial</a>
+<a href='/css/default.asp'>CSS Tutorial</a>
+<a href='/css/css3_intro.asp'>CSS3 Tutorial</a>
+<a href='/bootstrap/default.asp'>Bootstrap Tutorial</a>
+</div>
+<div class="w3DropdownItem">
+<h3>JavaScript</h3>
+<a href='/js/default.asp'>JavaScript Tutorial</a>
+<a href='/jquery/default.asp'>jQuery Tutorial</a>
+<a href='/jquerymobile/default.asp'>jQuery Mobile Tutorial</a>
+<a href='/appml/default.asp'>AppML Tutorial</a>
+<a href='/angular/default.asp'>AngularJS Tutorial</a>
+<a href='/ajax/default.asp'>AJAX Tutorial</a>
+<a href='/json/default.asp'>JSON Tutorial</a>
+</div>
+<div class="w3DropdownItem">
+<h3>Graphics</h3>
+<a href='/canvas/default.asp'>Canvas Tutorial</a>
+<a href='/svg/default.asp'>SVG Tutorial</a>
+<a href='/googleapi/default.asp'>Google Maps Tutorial</a>
+</div>
+<div class="w3DropdownItem">
+<h3>Server Side</h3>
+<a href='/sql/default.asp'>SQL Tutorial</a>
+<a href='/php/default.asp'>PHP Tutorial</a>
+<a href='/asp/default.asp'>ASP Tutorial</a>
+<a href='/aspnet/default.asp'>ASP.NET Tutorial</a>
+<a href='/vbscript/default.asp'>VBScript Tutorial</a>
+<a href='/appml/default.asp'>AppML Tutorial</a>
+</div>
+<div class="w3DropdownItem">
+<h3>Web</h3>
+<a href='/website/default.asp'>Web Building</a>
+<a href='/browsers/default.asp'>Web Statistics</a>
+<a href='/cert/default.asp'>Web Certification</a>
+</div>
+<div class="w3DropdownItem">
+<h3>XML</h3>
+<a href='/xml/default.asp'>XML Tutorial</a>
+<a href='/dtd/default.asp'>DTD Tutorial</a>
+<a href='/schema/default.asp'>Schema Tutorial</a>
+<a href='/dom/default.asp'>XML DOM Tutorial</a>
+<a href='/xpath/default.asp'>XPath Tutorial</a>
+<a href='/xsl/default.asp'>XSLT Tutorial</a>
+<a href='/xquery/default.asp'>XQuery Tutorial</a>
+<a href='/rss/default.asp'>RSS Tutorial</a>
+<a href='/webservices/default.asp'>WSDL Tutorial</a>
+</div>
+</div>
+</div>
+<div id='w3dropdownreferences' class='w3DropdownMenu container-fluid'>
+<div class="w3DropdownInner">
+<button type="button" class="xclose w3DropdownClose" onclick="hideDropdownMenu()" title="Close"><span>&times;</span></button>
+<br>
+<div class="w3DropdownItem">
+<h3>HTML/CSS</h3>
+<a href='/tags/default.asp'>HTML Tag Reference</a>
+<a href='/tags/ref_eventattributes.asp'>HTML Event Reference</a>
+<a href='/tags/ref_colornames.asp'>HTML Color Reference</a>
+<a href='/cssref/default.asp'>CSS 1,2,3 Reference</a>
+<a href='/bootstrap/bootstrap_ref_css_text.asp'>Bootstrap Reference</a>
+</div>
+<div class="w3DropdownItem">
+<h3>JavaScript</h3>
+<a href='/jsref/default.asp'>JavaScript Reference</a>
+<a href='/jsref/default.asp'>HTML DOM Reference</a>
+<a href='/jquery/jquery_ref_selectors.asp'>jQuery Reference</a>
+<a href='/jquerymobile/jquerymobile_ref_data.asp'>jQuery Mobile Reference</a>
+<a href='/googleAPI/google_maps_ref.asp'>Google Maps Reference</a>
+</div>
+<div class="w3DropdownItem">
+<h3>Server Side</h3>
+<a href='/php/php_ref_array.asp'>PHP Reference</a>
+<a href='/sql/sql_quickref.asp'>SQL Reference</a>
+<a href='/asp/asp_ref_response.asp'>ASP Reference</a>
+<a href='/vbscript/vbscript_ref_functions.asp'>VBScript Reference</a>
+<a href='/aspnet/webpages_ref_classes.asp'>Razor Reference</a>
+<a href='/aspnet/aspnet_refhtmlcontrols.asp'>ASP.NET Reference</a>
+</div>
+<div class="w3DropdownItem">
+<h3>XML</h3>
+<a href='/dom/dom_nodetype.asp'>XML DOM Reference</a>
+<a href='/xsl/xsl_w3celementref.asp'>XSLT Reference</a>
+<a href='/xpath/xpath_functions.asp'>XPath Reference</a>
+<a href='/xquery/xquery_reference.asp'>XQuery Reference</a>
+<a href='/schema/schema_elements_ref.asp'>Schema Reference</a>
+<a href='/rss/rss_reference.asp'>RSS Reference</a>
+<a href='/svg/svg_reference.asp'>SVG Reference</a>
+</div>
+<div class="w3DropdownItem">
+<h3>Charsets</h3>
+<a href='/charsets/default.asp'>HTML Character Sets</a>
+<a href='/charsets/ref_html_ascii.asp'>HTML ASCII</a>
+<a href='/charsets/ref_html_ansi.asp'>HTML ANSI</a>
+<a href='/charsets/ref_html_ansi.asp'>HTML Windows-1252</a>
+<a href='/charsets/ref_html_8859.asp'>HTML ISO-8859-1</a>
+<a href='/charsets/ref_html_symbols.asp'>HTML Symbols</a>
+<a href='/charsets/ref_html_utf8.asp'>HTML UTF-8</a>
+</div>
+</div>
+</div>
+<div id='w3dropdownexamples' class='w3DropdownMenu container-fluid'>
+<div class="w3DropdownInner">
+<button type="button" class="xclose w3DropdownClose" onclick="hideDropdownMenu()" title="Close"><span>&times;</span></button>
+<br>
+<div class="w3DropdownItem">
+<h3>HTML/CSS</h3>
+<a href='/html/html_examples.asp'>HTML Examples</a>
+<a href='/css/css_examples.asp'>CSS Examples</a>
+</div>
+<div class="w3DropdownItem">
+<h3>JavaScript</h3>
+<a href="/js/js_examples.asp" target="_top">JavaScript Examples</a>
+<a href="/js/js_dom_examples.asp" target="_top">HTML DOM Examples</a>
+<a href="/jquery/jquery_examples.asp" target="_top">jQuery Examples</a>
+<a href="/jquerymobile/jquerymobile_examples.asp" target="_top">jQuery Mobile Examples</a>
+<a href="/angular/angular_examples.asp" target="_top">AngularJS Examples</a>
+<a href="/ajax/ajax_examples.asp" target="_top">AJAX Examples</a>
+</div>
+<div class="w3DropdownItem">
+<h3>Server Side</h3>
+<a href="/php/php_examples.asp" target="_top">PHP Examples</a>
+<a href="/asp/asp_examples.asp" target="_top">ASP Examples</a>
+<a href="/vbscript/vbscript_examples.asp" target="_top">VBScript Examples</a>
+<a href="/aspnet/webpages_examples.asp" target="_top">Razor Examples</a>
+<a href="/aspnet/aspnet_examples.asp" target="_top">.NET Examples</a>
+</div>
+<div class="w3DropdownItem">
+<h3>XML</h3>
+<a href="/xml/xml_examples.asp" target="_top">XML Examples</a>
+<a href="/dtd/dtd_examples.asp" target="_top">DTD Examples</a>
+<a href="/dom/dom_examples.asp" target="_top">XML DOM Examples</a>
+<a href="/xsl/xsl_examples.asp" target="_top">XSL Examples</a>
+<a href="/xsl/xsl_examples.asp" target="_top">XSLT Examples</a>
+<a href="/xpath/xpath_examples.asp" target="_top">XPath Examples</a>
+<a href="/xquery/xquery_example.asp" target="_top">XQuery Examples</a>
+<a href="/schema/schema_example.asp" target="_top">Schema Examples</a>
+<a href="/rss/rss_examples.asp" target="_top">RSS Examples</a>
+<a href="/svg/svg_examples.asp" target="_top">SVG Examples</a>
+</div>
+</div>
+</div>
+<div id='w3dropdownsearch' class='w3DropdownMenu container-fluid' style="overflow:visible;">
+<div class="w3DropdownInner">
+<button type="button" class="xclose w3DropdownClose" onclick="hideDropdownMenu()" title="Close"><span>&times;</span></button>
+<br>
+<div class="w3DropdownInnerInner">
+Search w3schools.com:
+<div id='googleSearch' style="color:#000000;font-size:15px !important;"><div class='gcse-search'></div></div>
+</div>
+</div>
+</div>
+<div id='w3dropdowntranslate' class='w3DropdownMenu container-fluid'>
+<div class="w3DropdownInner">
+<button type="button" class="xclose w3DropdownClose" onclick="hideDropdownMenu()" title="Close"><span>&times;</span></button>
+<br>
+<div class="w3DropdownInnerInner">
+<div id='translateSection'>
+Translate w3schools.com:<div id='google_translate_element'></div></div>
+</div>
+</div>
+</div>
+
+<script>
+var menu = $('#topnavDIV'), pos = menu.offset();
+$(window).scroll(function(){
+    if($(this).scrollTop() > pos.top){
+        menu.addClass('topnavContainerScroll');        
+        $("#topDIV").addClass('topScroll');
+        $(".w3DropdownMenu").addClass('w3DropdownMenuScroll');        
+        $("#menyen").addClass('menyenScroll');
+        $("#topLogo").css("display","none");
+     } else if($(this).scrollTop() <= pos.top){
+        menu.removeClass('topnavContainerScroll');
+        $("#topDIV").removeClass('topScroll');
+        $(".w3DropdownMenu").removeClass('w3DropdownMenuScroll');
+        $("#menyen").removeClass('menyenScroll');
+        $("#topLogo").css("display","");
+     } });
+$(document).ready(function(){
+  $("#dropdownTutorialsBtn").click(function(){
+    closeTheOthers("tutorials");
+    if ($("#w3dropdowntutorials").css("display") == "none") {
+      $("#dropdownTutorialsBtn").css("background-color","#f5f5f5");
+      $("#dropdownTutorialsBtn").css("color","#555555");
+    } else {
+      $("#dropdownTutorialsBtn").css("background-color","");
+      $("#dropdownTutorialsBtn").css("color","");
+    }
+    $("#w3dropdowntutorials").fadeToggle(200, function () {$("#dropdownTutorialsBtn").css("background-color","");$("#dropdownTutorialsBtn").css("color","");});
+    return false;      
+  });
+  $("#dropdownReferencesBtn").click(function(){
+    closeTheOthers("references");
+    if ($("#w3dropdownreferences").css("display") == "none") {
+      $("#dropdownReferencesBtn").css("background-color","#f5f5f5");
+      $("#dropdownReferencesBtn").css("color","#555555");
+    } else {
+      $("#dropdownReferencesBtn").css("background-color","");
+      $("#dropdownReferencesBtn").css("color","");
+    }
+    $("#w3dropdownreferences").fadeToggle(200, function(){$("#dropdownReferencesBtn").css("background-color","");$("#dropdownReferencesBtn").css("color","");});
+    return false;      
+  });
+  $("#dropdownExamplesBtn").click(function(){
+    closeTheOthers("examples");
+    if ($("#w3dropdownexamples").css("display") == "none") {
+      $("#dropdownExamplesBtn").css("background-color","#f5f5f5");
+      $("#dropdownExamplesBtn").css("color","#555555");
+    } else {
+      $("#dropdownExamplesBtn").css("background-color","");
+      $("#dropdownExamplesBtn").css("color","");
+    }
+    $("#w3dropdownexamples").fadeToggle(200, function(){$("#dropdownExamplesBtn").css("background-color","");$("#dropdownExamplesBtn").css("color","");});
+    return false;      
+  });
+  $("#dropdownSearchBtn").click(function(){
+    closeTheOthers("search");
+    if ($("#w3dropdownsearch").css("display") == "none") {
+      $("#dropdownSearchBtn").css("background-color","#f5f5f5");
+      $("#dropdownSearchBtn").css("color","#555555");
+    } else {
+      $("#dropdownSearchBtn").css("background-color","");
+      $("#dropdownSearchBtn").css("color","");
+    }
+    $("#w3dropdownsearch").fadeToggle(200, function(){$("#gsc-i-id1").focus();$("#dropdownSearchBtn").css("background-color","");});
+    return false;      
+  });
+  $("#dropdownTranslateBtn").click(function(){
+    closeTheOthers("translate");
+    if ($("#w3dropdowntranslate").css("display") == "none") {
+      $("#dropdownTranslateBtn").css("background-color","#f5f5f5");
+      $("#dropdownTranslateBtn").css("color","#555555");
+    } else {
+      $("#dropdownTranslateBtn").css("background-color","");
+      $("#dropdownTranslateBtn").css("color","");
+    }
+    $("#w3dropdowntranslate").fadeToggle(200, function(){$("#dropdownTranslateBtn").css("background-color","");});
+    return false;      
+  });
+  $(".main").click(function(){
+    closeTheOthers();
+  });
+  $(".top").click(function(){
+    closeTheOthers();
+  });
+});
+function closeTheOthers(x) {
+    if (x != "tutorials") { 
+        $("#dropdownTutorialsBtn").css("background-color","");
+        $("#dropdownTutorialsBtn").css("color","");
+        $("#w3dropdowntutorials").fadeOut(100);
+    }
+    if (x != "references") { 
+        $("#dropdownReferencesBtn").css("background-color","");
+        $("#dropdownReferencesBtn").css("color","");
+        $("#w3dropdownreferences").fadeOut(100);
+    }
+    if (x != "examples") { 
+        $("#dropdownExamplesBtn").css("background-color","");
+        $("#dropdownExamplesBtn").css("color","");
+        $("#w3dropdownexamples").fadeOut(100);
+    }
+    if (x != "search") { 
+        $("#dropdownSearchBtn").css("background-color","");
+        $("#dropdownSearchBtn").css("color","");
+        $("#w3dropdownsearch").fadeOut(100);
+    }
+    if (x != "translate") { 
+        $("#dropdownTranslateBtn").css("background-color","");
+        $("#dropdownTranslateBtn").css("color","");
+        $("#w3dropdowntranslate").fadeOut(100);
+    }
+}
+var menyknapp_hartrykket = 0;
+function vismenyen() {
+closeTheOthers();
+x = document.getElementById("menyen");
+if (menyknapp_hartrykket == 0) {
+	x.style.position = "fixed";
+	x.style.zIndex = "1000";	
+	x.style.top = "90px";	
+	x.style.bottom = "0";	
+	x.style.overflow = "auto";	
+	x.style.display = "block";
+	x.style.right = "0";
+	x.style.backgroundColor = "#ffffff";
+	x.style.padding = "20px";
+	x.style.borderLeft = "2px solid #f1f1f1";
+	x.style.borderBottom = "2px solid #f1f1f1";
+    menyknapp_hartrykket = 1;
+} else {
+    x.style.display = "none";
+    menyknapp_hartrykket = 0;
+}
+}
+function hideDropdownMenu() {
+    closeTheOthers();
+}
+skyscraperResize();
+
+</script>
+<script src="/w3schools.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</body>
+</html>
