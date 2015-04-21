@@ -19,7 +19,7 @@ public class Threads extends Thread {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String possarNom(String url, boolean[]filtres){
+	public String possarNom(String url, boolean[]filtres) {
 		
 		nom = url.substring(url.lastIndexOf("/"));
 		//System.out.println(url);
@@ -113,10 +113,9 @@ public class Threads extends Thread {
 		}
 		
 		if (existeix) {
-			nom.possarNom(url, filtres);
+			nom.possarNom(url, filtres);//esta mal, nom no tiene ningun metodo que se llame possarNom()
 			downloadURL(is, fos, filtres);
 		}
-		/*Probando probando*/
 		
 		
 	} catch (MalformedURLException e) {
