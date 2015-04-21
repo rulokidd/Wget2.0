@@ -113,7 +113,7 @@ public class Threads extends Thread {
 		}
 		
 		if (existeix) {
-			nom.possarNom(url, filtres);//esta mal, nom no tiene ningun metodo que se llame possarNom()
+			nom = possarNom(url, filtres);
 			downloadURL(is, fos, filtres);
 		}
 		
