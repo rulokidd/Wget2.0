@@ -116,6 +116,7 @@ public class Threads extends Thread {
 			nom.possarNom(url, filtres);
 			downloadURL(is, fos, filtres);
 		}
+		/*Probando probando*/
 		
 		
 	} catch (MalformedURLException e) {
