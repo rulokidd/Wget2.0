@@ -3,6 +3,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 
+/**
+ * 
+ * @author Albert Pineda i Raul Palencia
+ * La classe AsciiInputStream que exten de FilterInput Stream, llegira un fitxer i el 
+ * passara a format -asc, eliminant els tags i els comentaris.
+ */
 public class AsciiInputStream extends FilterInputStream{
 
 	public AsciiInputStream(InputStream in) {

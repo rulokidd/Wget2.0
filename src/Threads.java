@@ -17,7 +17,13 @@ public class Threads extends Thread {
 		this.filtres = filtres; 
 		// TODO Auto-generated constructor stub
 	}
-	
+	/**
+	 * La funcio possarNom de tipus String, retorna el nom del fitxer
+	 * que ens retornara quan hagi passa't per un o mes filtres.
+	 * @param url, string que afegirem el format dels args 
+	 * @param filtres, array de booleans amb 3 posicions, -asc, -zip, -gzip.
+	 * @return nom, retornem el nom del fitxer que es crearˆ
+	 */
 	public String possarNom(String url, boolean[]filtres) {
 		String nom;
 		
@@ -39,7 +45,13 @@ public class Threads extends Thread {
 		return nom;
 		
 	}
-
+	/**
+	 * El metode dowloadURL tal i com indica el seu nom, llegira d'un fitxer txt les urls a baixar.
+	 * @param is, input Stream d'entrada
+	 * @param fos, File output Stream de sortida, fitxer en el que guardarem el resultat escollit.
+	 * @param filtres, array de booleans amb 3 posicions, -asc, -zip, -gzip.
+	 * @throws IOException, exepcio per si hi ha algun error.
+	 */
 	public void downloadURL(InputStream is, FileOutputStream fos, boolean[] filtres) throws IOException {
 		
 			InputStream is2;
@@ -66,7 +78,11 @@ public class Threads extends Thread {
 			
 		
 	}
-//treure nom aqu’
+	/**
+	 * Metode heredat de la extensio de Thread, una vegada s'hagi creat un thread aquest mirara
+	 * que ha de fer, mirar com ha de descarregar els urls del fitxer txt i els editara tal i com
+	 * es digui.
+	 */
 	@Override
 	public void run() {
 		

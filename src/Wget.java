@@ -12,18 +12,20 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * 
- */
-
-/**
  * @author Albert Pineda i Raul Palencia
- * 
+ * Classe Wget, com el seu nom indica fara la mateixa funci— que l'eina
+ * que s'utilitza a Linux, descarregara una pagina web i depenen del tipus
+ * en que s'en demani aquesta web afegira els filtres adients.
  */
 public class Wget {
 
 	/**
-	 * @param args
-	 * @throws IOException
+	 * El metode BuscarArgs, mirara a l'Array d'strings args els filtres seleccionats
+	 * i els activara si els troba.
+	 * @param args, array el qual podrem mirar quin tipus de filtre es vol
+	 * a la url a descarregar.
+	 * @param filtres, array de booleans que s'activara quan un filtre estigui actiu.
+	 * @throws IOException, exepcio per si hi ha algun error.
 	 */
 	public static void BuscarArgs (String[] args, boolean[] filtres) {
 		
@@ -43,7 +45,12 @@ public class Wget {
 			i--;
 		}
 	}
-
+	/**
+	 * El metode main() llegira les urls, de l'arxiu urls.txt, buscara els filtres 
+	 * activats i cridara al thread per que ho crei.
+	 * @param args, Array d'strings amb els que sabren quins filtres estan activats. 
+	 * @throws IOException, exepcio per si hi ha algun error.
+	 */
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
