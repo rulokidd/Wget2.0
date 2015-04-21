@@ -1,6 +1,7 @@
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -95,7 +96,8 @@ public class Threads extends Thread {
 		URL urlStr;
 		InputStream is;
 		//AsciiInputStream is_ascii;
-		FileOutputStream fos;
+		//FileOutputStream fos;
+		OutputStream os = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget2.0/" + nom);
 		
 		try {
 			
@@ -106,7 +108,7 @@ public class Threads extends Thread {
 		//is2 = is;
 		
 		//Fitxer en el que guardarem el contingut
-		 fos = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget2.0/" + nom);
+		//fos = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget2.0/" + nom);
 		 
 		 
 		// TODO Auto-generated method stub
@@ -130,7 +132,7 @@ public class Threads extends Thread {
 		
 		if (existeix) {
 			nom = possarNom(url, filtres);//nom.possarNom(url, filtres);
-			downloadURL(is, fos, filtres);
+			downloadURL(is, os, filtres);
 		}
 		
 		
