@@ -56,9 +56,9 @@ public class Wget {
 			String url, nom;
 			int cont = 0;
 			BufferedReader fr = new BufferedReader(new FileReader(
-					"/users/rulo13_15/Documents/workspace/Urls.txt"));
+					"/users/rulo13_15/Documents/workspace/urls.txt"));
 			
-			BuscarArgs ( args, filtres);
+			BuscarArgs (args, filtres);
 			
 			while ((url = fr.readLine()) != null) {
 				/*

@@ -1,393 +1,293 @@
 
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-        <title>dEIC Homepage</title>
-  
-
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<meta name="verify-v1" content="Jdaac1+fpV5HZiRHeTEzSni7H0h0wumngsw05dAubf4=" >
-<meta name="keywords" content="deic, departament, enginyeria, informacio, comunicacions">
-<meta name="robots" content="index,follow">
-<meta name="description" content="Pàgina principal del Departament d'Enginyeria de la Informació i les Comunicacions (dEIC) de la Universitat Autònoma de Barcelona (UAB)">
-
-<link REL="SHORTCUT ICON" HREF="../images/deic.png">
-<link rel="STYLESHEET" type="text/css" href="../css/common.css">
-<style type="text/css">
-	
-select
-{ 
-	font-size: 13px; 
-	font-family: Verdana,sans-serif; 
-	color: gray; 
-}
-
-input.boto
-{
-	background-color:#AAAAAA; 
-	color: #FFFFFF;
-	border-style: solid;
-	border-color: #DDDDDD;
-}
-
-hr {
-	padding: 0;
-	border: solid #f8f6f5;
-	border-width: 1px 0 0 0;
-	color: #f8f6f5;
-	height: 0px;
-}
-
-hr.bottom {
-	padding: 0;
-	border: solid #808080;
-	border-width: 1px 0 0 0;
-	color: #808080;
-	height: 0px;
-}
-
-td {
-	overflow:hidden;
-}
-
+<title>PHP 5 Introduction</title>
+<style>a.menu_php_intro{font-weight:bold;} a.topnav_php{background-color:#8AC007 !important;color:#ffffff !important;}</style>
+<style>
+#smallnavContainer {display:none;}
 </style>
-	
-<script type="text/javascript">
-function formHandler(form)
-{
-	var URL = form.site.options[form.site.selectedIndex].value;
-	window.location.href = URL;
-}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+<meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX Angular ASP .NET PHP SQL tutorials, references, web building examples">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/bs/css/bootstrap_w3schools.css">
+<script src="/jquery.js"></script>
+<script src="/bs/js/bootstrap.min.js"></script>
 
-/* 
-  ------------------------------------
-  PVII Menu CSS Express Drop-Down Menu
-  by Project Seven Development
-  www.projectseven.com
-  ------------------------------------
-*/
-function dropdownMenu()
-{
- //v1.1.0.2 by PVII-www.projectseven.com
- if(navigator.appVersion.indexOf("MSIE")==-1){return;}
- var i,k,g,lg,r=/\s*p7hvr/,nn='',c,cs='p7hvr',bv='p7menubar';
- for(i=0;i<10;i++){g=document.getElementById(bv+nn);if(g){
- lg=g.getElementsByTagName("LI");if(lg){for(k=0;k<lg.length;k++){
- lg[k].onmouseover=function(){c=this.className;cl=(c)?c+' '+cs:cs;
- this.className=cl;};lg[k].onmouseout=function(){c=this.className;
- this.className=(c)?c.replace(r,''):'';};}}}nn=i+1;}
-}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
 </script>
 
-<script src="../js/floatdiv.js" type="text/javascript"></script>
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
 
+<script type='text/javascript'>
+ // GPT slots
+ var gptAdSlots = [];
+ googletag.cmd.push(function() {
+
+   var leaderMapping = googletag.sizeMapping().
+   // Mobile ad
+   addSize([0, 0], [320, 50]). 
+   // Vertical Tablet ad
+   addSize([480, 0], [468, 60]). 
+   // Horizontal Tablet
+   addSize([700, 0], [728, 90]).
+   // Desktop and bigger ad
+   addSize([1200, 0], [[728, 90], [970, 90]]).build();
+
+   gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
+   defineSizeMapping(leaderMapping).addService(googletag.pubads());
+
+   var skyMapping = googletag.sizeMapping().
+   // Mobile ad
+   addSize([0, 0], [320, 50]). 
+   // Tablet ad
+   addSize([975, 0], [120, 600]). 
+   // Desktop
+   addSize([1100, 0], [[120, 600], [160, 600]]).
+   // Large Desktop
+   addSize([1675, 0], [[120, 600], [160, 600], [300, 600], [300, 1050]]).build();
+   gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[120, 600], [160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
+   defineSizeMapping(skyMapping).addService(googletag.pubads());
+
+   var bmrMapping = googletag.sizeMapping().
+   // Smaller
+   addSize([0, 0], [[300, 250], [336, 280]]). 
+   // Large Desktop
+   addSize([1200, 0], [[300, 250], [336, 280], [728, 280], [970, 250]]).build();
+   gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [728, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
+   defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+
+   gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').addService(googletag.pubads());
+
+   googletag.pubads().setTargeting("content","php");
+   googletag.enableServices();
+ });
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+var ybeforeResize = window.innerWidth;
+var zbeforeResize = window.innerWidth;
+
+
+function skyscraperResize() {
+if (window.innerWidth < 975 + 17) {
+			document.getElementById("div-gpt-ad-1422003450156-5").style.minHeight="0";
+		}
+}
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (1200 + 14) && afterResize >= (1200 + 14)) || (xbeforeResize >= (1200 + 14) && afterResize < (1200 + 14)) ||
+        (xbeforeResize < (700 + 14) && afterResize >= (700 + 14)) || (xbeforeResize >= (700 + 14) && afterResize < (700 + 14)) ||
+        (xbeforeResize < (480 + 17) && afterResize >= (480 + 17)) ||(xbeforeResize >= (480 + 17) && afterResize < (480 + 17))) {
+        xbeforeResize = afterResize;
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
+    }
+    if ((ybeforeResize < (1675 + 14) && afterResize >= (1675 + 14)) || (ybeforeResize >= (1675 + 14) && afterResize < (1675 + 14)) ||
+    	(ybeforeResize < (1100 + 14) && afterResize >= (1100 + 14)) || (ybeforeResize >= (1100 + 14) && afterResize < (1100 + 14)) ||
+        (ybeforeResize < (975 + 17) && afterResize >= (975 + 17)) || (ybeforeResize >= (975 + 17) && afterResize < (975 + 17))) {
+        ybeforeResize = afterResize;
+       	skyscraperResize()
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[1]]);
+        });
+    }
+    if ((zbeforeResize < (1200 + 14) && afterResize >= (1200 + 14)) || (zbeforeResize >= (1200 + 14) && afterResize < (1200 + 14))) {
+        zbeforeResize = afterResize;
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[2], gptAdSlots[3]]);
+        });
+	}
+}
+</script>
+<link rel="stylesheet" type="text/css" href="/stdtheme.css" />
 </head>
-
-<body bgcolor="#ffffff" onLoad="dropdownMenu()">
-
-
-<table align="center" width="800" cellspacing="0" cellpadding="0" border="0">
-	<tr valign="bottom">
-		<td colspan="2">
-
-			<!-- Logo comun para todo, solo varian los enlaces -->
-			<div style="position:relative; z-index:1;">
-				<img src="../../images/deic.png" width="800" height="80" border="0" alt="" usemap="#deicmap">
-				<map name="deicmap">
-					<!-- Idiomas (en version anterior estaban pensados para cada caso -->
-					<!--<area shape="rect" coords="0,0,65,22" href="../index.php?idioma=2">
-					<area shape="rect" coords="65,0,125,22" href="../index.php?idioma=1">-->
-					<!-- Logo UAB -->
-					<area shape="rect" coords="702,33,790,75" href="http://www.uab.cat" alt="" title="" target="_blank">
-					<area shape="rect" coords="9,33,118,75" href="../index.php?idioma=0" alt="" title="" target="_parent">
-				</map>
-			</div>
-
-				<div class="languages">
-				<!--<a href="../index.php?idioma=2" onFocus="this.blur()">English</a> |
-				<a href="../index.php?idioma=1" onFocus="this.blur()">Espa&ntilde;ol</a>-->
-				<a href="?idioma=2" onFocus="this.blur()">English</a> |
-				<a href="?idioma=1" onFocus="this.blur()">Espa&ntilde;ol</a>
-			</div>
-			<div class="title">
-				<font color="#cc9900">departament</font> <br>
-				<font color="#a24d1a">d'Enginyeria de la Informació i de les Comunicacions</font>
-			</div>
-
-
-		
-		</td> 
-	</tr>
-	<tr>
-		<td valign="top" width="25%">
-
-		
-
-
-<!-- El siguiente codigo comentado seria necesario de no estar incluido "menu.php" en otra pagina -->
-<!--
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
-
-<head>
-<title>Menu</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-</head>
-
 <body>
--->
+<div id='leftBackground'></div><div id='topDIV' class='top'><div id='topLogo'><a href='http://www.w3schools.com'><img src='/images/w3logotest2.png' alt='W3Schools.com' style='border:0;' /></a></div></div><div id='topnavDIV' class='topnavContainer'><div class='container-fluid' style='max-width:1600px;margin-left:0px;padding-left:0;'><ul class='nav nav-pills topnav'><li><a href='/default.asp' class='topnav_home' title='Home'>&nbsp;</a></li><li><a href='/html/default.asp' class='topnav_html' title='HTML Tutorial'>HTML</a></li><li><a href='/css/default.asp' class='topnav_css' title='CSS Tutorial'>CSS</a></li><li><a href='/js/default.asp' class='topnav_js' title='JavaScript Tutorial'>JAVASCRIPT</a></li><li><a href='/sql/default.asp' class='topnav_sql' title='SQL Tutorial'>SQL</a></li><li><a href='/php/default.asp' class='topnav_php' title='PHP Tutorial'>PHP</a></li><li><a href='/jquery/default.asp' class='topnav_jquery' title='jQuery Tutorial'>jQUERY</a></li><li><a href='/bootstrap/default.asp' class='topnav_bootstrap' title='Bootstrap Tutorial'>BOOTSTRAP</a></li><li><a href='/angular/default.asp' class='topnav_angular' title='Angular Tutorial'>ANGULAR</a></li><li><a href='/xml/default.asp' class='topnav_xml' title='XML Tutorial'>XML</a></li><li><a id='dropdownTutorialsBtn' href='#' class='topnav_tutorials' title='More Tutorials'>TUTORIALS <span class='caret'></span></a></li><li><a id='dropdownReferencesBtn' href='#' class='topnav_references' title='More References'>REFERENCES <span class='caret'></span></a></li><li><a id='dropdownExamplesBtn' href='#' class='topnav_examples' title='More Examples'>EXAMPLES <span class='caret'></span></a></li><li><a href='/forum/default.asp' class='topnav_forum' title='W3Schools Forum'>FORUM</a></li><li class='menuBtn'><a href='javascript:void(0)' class='topnav_menu' onclick='vismenyen()' title='Menu'><hr><hr><hr></a></li><li class='menuSearch'><a id='dropdownSearchBtn' href='javascript:void(0);' class='topnav_search' title='Search W3Schools'>&nbsp;</a></li><li class='menuTranslate'><a id='dropdownTranslateBtn' href='javascript:void(0);' class='topnav_translate' title='Translate W3Schools'>&nbsp;</a></li></ul></div></div><div class='container-fluid master'><div class='row'><div class='col-lg-2 col-md-2 col-sm-3 menu'><div id='menyen'><h2 class="left"><span class="left_h2">PHP</span> Tutorial</h2>
+<a target="_top" href="default.asp" class="menu_default">PHP HOME</a>
+<a target="_top" href="php_intro.asp" class="menu_php_intro">PHP Intro</a>
+<a target="_top" href="php_install.asp" class="menu_php_install">PHP Install</a>
+<a target="_top" href="php_syntax.asp" class="menu_php_syntax">PHP Syntax</a>
+<a target="_top" href="php_variables.asp" class="menu_php_variables">PHP Variables</a>
+<a target="_top" href="php_echo_print.asp" class="menu_php_echo_print">PHP Echo / Print</a>
+<a target="_top" href="php_datatypes.asp" class="menu_php_datatypes">PHP Data Types</a>
+<a target="_top" href="php_string.asp" class="menu_php_string">PHP Strings</a>
+<a target="_top" href="php_constants.asp" class="menu_php_constants">PHP Constants</a>
+<a target="_top" href="php_operators.asp" class="menu_php_operators">PHP Operators</a>
+<a target="_top" href="php_if_else.asp" class="menu_php_if_else">PHP If...Else...Elseif</a>
+<a target="_top" href="php_switch.asp" class="menu_php_switch">PHP Switch</a>
+<a target="_top" href="php_looping.asp" class="menu_php_looping">PHP While Loops</a>
+<a target="_top" href="php_looping_for.asp" class="menu_php_looping_for">PHP For Loops</a>
+<a target="_top" href="php_functions.asp" class="menu_php_functions">PHP Functions</a>
+<a target="_top" href="php_arrays.asp" class="menu_php_arrays">PHP Arrays</a>
+<a target="_top" href="php_arrays_sort.asp" class="menu_php_arrays_sort">PHP Sorting Arrays</a>
+<a target="_top" href="php_superglobals.asp" class="menu_php_superglobals">PHP Superglobals</a>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Forms</h2>
+<a target="_top" href="php_forms.asp" class="menu_php_forms">PHP Form Handling</a>
+<a target="_top" href="php_form_validation.asp" class="menu_php_form_validation">PHP Form Validation</a>
+<a target="_top" href="php_form_required.asp" class="menu_php_form_required">PHP Form Required</a>
+<a target="_top" href="php_form_url_email.asp" class="menu_php_form_url_email">PHP Form URL/E-mail</a>
+<a target="_top" href="php_form_complete.asp" class="menu_php_form_complete">PHP Form Complete</a>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Advanced</h2>
+<a target="_top" href="php_arrays_multi.asp" class="menu_php_arrays_multi">PHP Arrays Multi</a>
+<a target="_top" href="php_date.asp" class="menu_php_date">PHP Date and Time</a>
+<a target="_top" href="php_includes.asp" class="menu_php_includes">PHP Include</a>
+<a target="_top" href="php_file.asp" class="menu_php_file">PHP File Handling</a>
+<a target="_top" href="php_file_open.asp" class="menu_php_file_open">PHP File Open/Read</a>
+<a target="_top" href="php_file_create.asp" class="menu_php_file_create">PHP File Create/Write</a>
+<a target="_top" href="php_file_upload.asp" class="menu_php_file_upload">PHP File Upload</a>
+<a target="_top" href="php_cookies.asp" class="menu_php_cookies">PHP Cookies</a>
+<a target="_top" href="php_sessions.asp" class="menu_php_sessions">PHP Sessions</a>
+<a target="_top" href="php_filter.asp" class="menu_php_filter">PHP Filters</a>
+<a target="_top" href="php_filter_advanced.asp" class="menu_php_filter_advanced">PHP Filters Advanced</a>
+<a target="_top" href="php_error.asp" class="menu_php_error">PHP Error Handling</a>
+<a target="_top" href="php_exception.asp" class="menu_php_exception">PHP Exception</a>
+<br>  
+<h2 class="left"><span class="left_h2">MySQL</span> Database</h2>
+<a target="_top" href="php_mysql_intro.asp" class="menu_php_mysql_intro">MySQL Database</a>
+<a target="_top" href="php_mysql_connect.asp" class="menu_php_mysql_connect">MySQL Connect</a>
+<a target="_top" href="php_mysql_create.asp" class="menu_php_mysql_create">MySQL Create DB</a>
+<a target="_top" href="php_mysql_create_table.asp" class="menu_php_mysql_create_table">MySQL Create Table</a>
+<a target="_top" href="php_mysql_insert.asp" class="menu_php_mysql_insert">MySQL Insert Data</a>
+<a target="_top" href="php_mysql_insert_lastid.asp" class="menu_php_mysql_insert_lastid">MySQL Get Last ID</a>
+<a target="_top" href="php_mysql_insert_multiple.asp" class="menu_php_mysql_insert_multiple">MySQL Insert Multiple</a>
+<a target="_top" href="php_mysql_prepared_statements.asp" class="menu_php_mysql_prepared_statements">MySQL Prepared</a>
+<a target="_top" href="php_mysql_select.asp" class="menu_php_mysql_select">MySQL Select Data</a>
+<a target="_top" href="php_mysql_delete.asp" class="menu_php_mysql_delete">MySQL Delete Data</a>
+<a target="_top" href="php_mysql_update.asp" class="menu_php_mysql_update">MySQL Update Data</a>
+<a target="_top" href="php_mysql_select_limit.asp" class="menu_php_mysql_select_limit">MySQL Limit Data</a>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> - XML</h2>
+<a target="_top" href="php_xml_parsers.asp" class="menu_php_xml_parsers">PHP XML Parsers</a>
+<a target="_top" href="php_xml_simplexml_read.asp" class="menu_php_xml_simplexml_read">PHP SimpleXML Parser</a>
+<a target="_top" href="php_xml_simplexml_get.asp" class="menu_php_xml_simplexml_get">PHP SimpleXML - Get</a>
+<a target="_top" href="php_xml_parser_expat.asp" class="menu_php_xml_parser_expat">PHP XML Expat</a>
+<a target="_top" href="php_xml_dom.asp" class="menu_php_xml_dom">PHP XML DOM</a>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> - AJAX</h2>
+<a target="_top" href="php_ajax_intro.asp" class="menu_php_ajax_intro">AJAX Intro</a>
+<a target="_top" href="php_ajax_php.asp" class="menu_php_ajax_php">AJAX PHP</a>
+<a target="_top" href="php_ajax_database.asp" class="menu_php_ajax_database">AJAX Database</a>
+<a target="_top" href="php_ajax_xml.asp" class="menu_php_ajax_xml">AJAX XML</a>
+<a target="_top" href="php_ajax_livesearch.asp" class="menu_php_ajax_livesearch">AJAX Live Search</a>
+<a target="_top" href="php_ajax_rss_reader.asp" class="menu_php_ajax_rss_reader">AJAX RSS Reader</a>
+<a target="_top" href="php_ajax_poll.asp" class="menu_php_ajax_poll">AJAX Poll</a>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Examples</h2>
+<a target="_top" href="php_examples.asp" class="menu_php_examples">PHP Examples</a>
+<a target="_top" href="php_quiz.asp" class="menu_php_quiz">PHP Quiz</a>
+<a target="_top" href="php_exam.asp" class="menu_php_exam">PHP Certificate</a>
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> Reference</h2>
+<a target="_top" href="php_ref_array.asp" class="menu_php_ref_array">PHP Array</a>
+<a target="_top" href="php_ref_calendar.asp" class="menu_php_ref_calendar">PHP Calendar</a>
+<a target="_top" href="php_ref_date.asp" class="menu_php_ref_date">PHP Date</a>
+<a target="_top" href="php_ref_directory.asp" class="menu_php_ref_directory">PHP Directory</a>
+<a target="_top" href="php_ref_error.asp" class="menu_php_ref_error">PHP Error</a>
+<a target="_top" href="php_ref_filesystem.asp" class="menu_php_ref_filesystem">PHP Filesystem</a>
+<a target="_top" href="php_ref_filter.asp" class="menu_php_ref_filter">PHP Filter</a>
+<a target="_top" href="php_ref_ftp.asp" class="menu_php_ref_ftp">PHP FTP</a>
+<a target="_top" href="php_ref_http.asp" class="menu_php_ref_http">PHP HTTP</a>
+<a target="_top" href="php_ref_libxml.asp" class="menu_php_ref_libxml">PHP Libxml</a>
+<a target="_top" href="php_ref_mail.asp" class="menu_php_ref_mail">PHP Mail</a>
+<a target="_top" href="php_ref_math.asp" class="menu_php_ref_math">PHP Math</a>
+<a target="_top" href="php_ref_misc.asp" class="menu_php_ref_misc">PHP Misc</a>
+<a target="_top" href="php_ref_mysqli.asp" class="menu_php_ref_mysqli">PHP MySQLi</a>
+<a target="_top" href="php_ref_simplexml.asp" class="menu_php_ref_simplexml">PHP SimpleXML</a>
+<a target="_top" href="php_ref_string.asp" class="menu_php_ref_string">PHP String</a>
+<a target="_top" href="php_ref_xml.asp" class="menu_php_ref_xml">PHP XML</a>
+<a target="_top" href="php_ref_zip.asp" class="menu_php_ref_zip">PHP Zip</a>
+<a target="_top" href="php_ref_timezones.asp" class="menu_php_ref_timezones">PHP Timezones</a>
+</div></div><div class='col-lg-10 col-md-10 col-sm-9 leaderboard'><div id='mainLeaderboard' style='overflow:hidden;'><!-- MainLeaderboard--><div id='div-gpt-ad-1422003450156-2'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script></div></div><div class='row'><div class='col-lg-10 col-md-10 col-sm-12 main'><div>
+<h1>PHP 5 <span class="color_h1">Introduction</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="default.asp">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="php_install.asp">Next Chapter &raquo;</a></div>
+</div>
+<hr>
+<p class="intro">PHP scripts are executed on the server.</p>
+<hr>
 
-<!--<table class="menu" width="190em" cellspacing="0" cellpadding="5">-->
-<table class="menu" width="130px" cellspacing="0" cellpadding="5">
-	<tr valign="top" >
-		<td>
-			<br>&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../index.php?idioma=0"><strong>Inici</strong></a>
-			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../info/info.php?idioma=0"><strong>Informació</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../personal/professors.php?idioma=0"><strong>Personal</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../docencia/docencia.php?idioma=0"><strong>Docència</strong></a>  	         
-			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../recerca/recerca.php?idioma=0"><strong>Recerca</strong></a>				
-			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../activitats/activitats.php?idioma=0"><strong>Activitats</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="../recursos/ofertes.php?idioma=0"><strong>Recursos</strong></a>			<HR width="100%" noShade SIZE=1> <!--color="#f8f6f5"-->
-		</td>
-	</tr>
-	<tr>
-		<td>
-			&nbsp;&nbsp;<img src="/images/arrow.gif" alt=""><a href="https://deic.uab.cat/entrada.php3" target="_blank" >Intranet</a>
-		</td>
-	</tr>
+<h2>What You Should Already Know</h2>
+<p>Before you continue you should have a basic understanding of the following:</p>
+<ul>
+  <li>HTML</li>
+	<li>CSS</li>
+	<li>JavaScript</li>
+</ul>
+<p>If you want to study these subjects first, find the tutorials on our
+<a href="/default.asp">Home page</a>.</p>
+<hr>
 
+<h2>What is PHP?</h2>
+<ul>
+<li>PHP is an acronym for &quot;PHP: Hypertext Preprocessor&quot;</li> 
+<li>PHP is a widely-used, open source scripting language</li>
+<li>PHP scripts are executed on the server</li>
+<li>PHP is free to download and use</li> 
+</ul>
+<table class="lamp" id="table1"><tr>
+<th style="width:34px"><img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px"></th>
+<td><strong>PHP is an amazing and popular language!</strong><br><br>It is powerful enough to be at the core of the biggest 
+blogging system on the web (WordPress)!<br>It is deep enough to run the largest social network 
+(Facebook)!<br>It is also easy enough to be a beginner's first server side 
+language!</td>
+</tr></table>
+<hr>
 
-	<!-- Los siguientes logos no seran visibles en este menu; se dejan los enlaces a los grupos de investigacion en la parte central -->
-	<!-- Links de recerca -->
-	<!--
-	<tr>
-		<td align="center"><a href="http://www.uab.cat" target=_blank><img src="../images/logoUAB.png"  width="50%" heigh="50%" border=0 alt="UAB" title="UAB"></a></td>
-	</tr>
-	<tr>
-		<td align="center"><a href="http://ccg.uab.es" target=_blank><img src="../images/ccg_small.png"  width="60%" heigh="60%"  border=0 alt="CCG" title="CCG"></a></td>
-	</tr>
-	<tr>
-		<td align="center"><a href="http://senda.uab.es" target=_blank><img src="../images/senda.png"  width="40%" heigh="40%"  border=0 alt="Senda" title="SENDA"/></a></td>	
-	</tr>
-	<tr>
-		<td align="center"><a href="http://gici.uab.es" target=_blank><img src="../../images/lhyper.png" width="50%" heigh="50%" border=0 alt="gici" title="GICI"></a></td>
-	</tr>
-	-->
-	<!-- En su lugar, se ponen las entidades que apoyan la investigacion -->
-	<tr>
- 		<td align="center"><strong>Amb el suport de:</strong><br></td>
-	</tr>
-	<tr>
-		<td align="center">
-			<img src="../images/suport.png" border=0 alt="Entitats que donen suport a la investigació" title="Entitats que donen suport a la investigació" usemap="#suportmap">
-			<map name="suportmap">
-				<area shape="rect" coords="3,3,53,53" href="http://www.gencat.cat/agaur" alt="AGAUR" title="AGAUR">
-				<area shape="rect" coords="56,2,108,55" href="http://www.europa.eu" alt="Unió europea" title="Unió europea">
-				<area shape="rect" coords="0,57,109,82" href="http://www.mityc.es" alt="Ministerio de industria, turismo y comercio" title="Ministerio de industria, turismo y comercio">
-				<area shape="rect" coords="0,86,108,112" href="http://www.micinn.es" alt="Ministerio de ciencia e innovación" title="Ministerio de ciencia e innovación">
-			</map>
-		</td>	
-	</tr>
+<h2>What is a PHP File?</h2>
+<ul>
+<li>PHP files can contain text, HTML, CSS, JavaScript, and PHP code</li>
+<li>PHP code are executed on the server, and the result is returned to the browser as plain HTML</li>
+<li>PHP files have extension &quot;.php&quot;</li> 
+</ul>
+<hr>
 
-
-	<!--<tr>
-	 <td align="center"><a href="../docencia/pfc.html"><img src="../images/pfc.jpg" width="50%" heigh="50%"   border=0 alt="pfc" title="PFC"></a></td>
-	</tr>-->
-
-	<tr>
- 		<td align="center"><strong>Cerca al dEIC:</strong></td>
-	</tr>
-		<!-- Fi Links de recerca -->
-	<tr>
-		<td align="center">
-			<!-- SiteSearch Google -->
-			<FORM method=GET action="http://www.google.com/custom">
-				<input type=hidden name=hl value="ca">
-				<input type=hidden name=ie value="ISO-8859-15">
-				<input type=hidden name=cof value="L:http://deic.uab.es/img/ccd-google.jpg;">
-				<input type=hidden name=iso value="ISO-8859-15">
-				<input type=hidden name=domains value="deic.uab.es">
-				<input type=hidden name=sitesearch value="deic.uab.es">
-				<input type=hidden name=btnG value="Cerca">	
-				<INPUT TYPE=text name=q size=15 maxlength=255 value="">
-				<A HREF="http://www.google.com/custom?q=&amp;cof=L:../img/ccd-google.jpg;http://deic.uab.es;&amp;domains=deic.uab.es&amp;sitesearch=deic.uab.es&amp;sa=Search%2BGoogle&amp;hl=ca"><IMG SRC="../images/google.gif"  border="0" ALT="dEIC-Google" title="Type text, press Enter"></A>
-			</FORM>
-			<!-- Fi SiteSearch Google -->
-		</td>
-	</tr>
-</table>
-
-<!-- El siguiente codigo comentado seria necesario de no estar incluido "menu.php" en otra pagina -->
-<!--
-</body>
-</html>
--->
-
-		</td>
-		<td valign="top" width="*">
-		<!--<table align="right">
-			<tr>
-				<td>-->
-
-				<!-- Quick links (V2) -->
-				<div id="menuwrapper" class="menuwrapper">
-					<ul id="p7menubar">
-					<li><a class="trigger" href="#">Quick links</a>
-					<ul>
-					<li><a href="../index.php?idioma=0" onFocus="this.blur()">Inici</a></li>
-					<li><a href="../personal/professors.php?idioma=0" onFocus="this.blur()">Personal</a></li>
-					<li><a href="../docencia/assignatures.php?idioma=0&amp;Centre1=1" onFocus="this.blur()">Assig-EE (Bellaterra)</a></li>
-					<li><a href="../docencia/assignatures.php?idioma=0&amp;Centre2=1" onFocus="this.blur()">Assig-EE (Sabadell)</a></li>
-					<li><a href="../docencia/practica.php" onFocus="this.blur()">Pràctiques</a></li>
-					<li><a href="../forum1/?idioma=0" onFocus="this.blur()">Forums</a></li>
-					<li><a href="../recerca/publicacions.php?idioma=0" onFocus="this.blur()">Publicacions</a></li>
-					<li><a href="../activitats/seminari.php?idioma=0" onFocus="this.blur()">Seminari</a></li>
-					<li><a href="../recursos/documents.php?idioma=0" onFocus="this.blur()">Recursos</a></li>
-					<li><a href="../recursos/ofertes.php?idioma=0" onFocus="this.blur()">Ofertes de feina</a></li>
-					</ul>
-					</li>
-					</ul>
-					<br class="clearit">
-				</div>
-
-				<!-- Quick links (V1) -->
-				<!--
-				<form name="form">
-				<select name="site" onChange="formHandler(this.form)">
-					<option value=""><b>Quick links</b>
-					<option value="../index.php?idioma=0">Inici					-->
-					<!-- <option value="../info/info.php?idioma=">-->
-					<!--
-					<option value="../personal/professors.php?idioma=0">Personal					<option value="../docencia/assignatures.php?idioma=0&Centre1=1">Assig-EE (Bellaterra)					<option value="../docencia/assignatures.php?idioma=0&Centre2=1">Assig-EE (Sabadell)					<option value="../docencia/practica.php">Pràctiques					<option value="../forum1/?idioma=0">Forums					<option value="../recerca/publicacions.php?idioma=0">Publicacions					<option value="../activitats/seminari.php?idioma=0">Seminari					<option value="../recursos/documents.php?idioma=0">Recursos					<option value="../recursos/ofertes.php?idioma=0">Ofertes de feina
-				</select>
-				</form>
-				-->					
-
-								<!--</td>
-			</tr>
-		</table>-->
-		<table width="*" cellspacing="0" cellpadding="0" border="0">
-
- 
-
-
-<!-- ?? -->
-<tr><!--Nuevo-->
-	<td align="left"></td>
-</tr><!--Nuevo-->
-
-	<!-- Logo grande del departamento -->
-	<tr>    		
-		<td align="center">
-		<img src="./images/ImatgeDEIC-3.jpg" width="440" height="280" border="0" alt="Grup dEIC" title="Grup dEIC">
-		</td>
-	</tr>
-
-<!--<tr>-->
-	<tr align="center">
-		<td align="center">
-			<br>
-
-			<!-- El tamanho de la tabla queda fijo, no aumenta -->
-			<table class="recerca" cellspacing="3" cellpadding="1" style="table-layout:fixed">
-
-	<!-- Consulta a la BBDD para obtener las palabras clave (keywords) asociadas a cada grupo de investigacion -->
-	
-			<tr>
-				<td colspan="3" bgcolor="#993400" class="title">
-					<table width="90%" cellpadding="0" cellspacing="0" border="0" style="padding: 0em 1em 0em 0em;" align="right">
-						<tr>
-						<td style="text-align:center" class="title">
-
-							Grups de recerca						</td>
-						<td style="text-align:right" class="title" align="right">
-							<!--<a href="../recerca/rssFeed.php"><img src="./images/rss.gif" width="46px" height="12px" border="0"></a>-->
-							<!--<a href="../recerca/rssFeed.php"><img src="./images/rss.gif" width="50px" height="14px" border="0"></a>-->
-							<a href="../recerca/rssFeed.php?idioma=0">
-								<img src="./images/rssMini.gif" alt="RSS" title="RSS" width="16px" height="16px" border="0"></a>
-						</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-
-			<tr align="center">
-			<td colspan="3">
-				<strong><em>
-
-					Els següents grups estan integrats en <a href="http://www.recerca.uab.es/grupsuab/" target="_blank">SGR</a>:
-				</em></strong>
-			</td>
-			</tr>
-
-			<tr align="left">
-				<td width=".100/3.%"><div id="divRecerca1" class="divRecerca"><div id="divRecercaContent1Close" align="right" style="margin-top:0px;margin-right:0px;">
-							<a onclick="HideContent('divRecerca1'); return false;"
-							   href="javascript:HideContent('divRecerca1')">
-							[X]
-							</a>
-							</div><div id="divRecercaContent1" align="left" style="margin-top:0px;margin-right:0px"><b>Information&nbsp;coding</b><br><strong>&nbsp;&nbsp;Bent&nbsp;functions</strong><br>&nbsp;&nbsp;&nbsp;Error-correcting&nbsp;codes<br>&nbsp;&nbsp;Completely&nbsp;Regular&nbsp;Codes<br>&nbsp;&nbsp;Perfect&nbsp;Codes<br>&nbsp;&nbsp;Propelinear&nbsp;Codes<br>&nbsp;&nbsp;Z2Z4-linear&nbsp;Codes<br>&nbsp;&nbsp;network&nbsp;coding<br><b>Distributed&nbsp;storage</b><br>&nbsp;&nbsp;regenerating&nbsp;codes<br>&nbsp;&nbsp;data&nbsp;authentication<br>&nbsp;&nbsp;data&nbsp;integrity<br>&nbsp;&nbsp;data&nbsp;hiding<br><b>Magma&nbsp;software&nbsp;system</b><br>&nbsp;&nbsp;Algorithms&nbsp;for&nbsp;nonlinear&nbsp;codes<br>&nbsp;&nbsp;Algorithms&nbsp;for&nbsp;Z2Z4-linear&nbsp;codes<br><br><br></div><a href="./recerca/publicacionsCCSG.php" target="_blank">Publicacions</a><br>url: <a href="http://ccg.uab.es" target="_blank">http://ccg.uab.es</a><br></div><a id="divRecercaContent1Link"
-							   onclick="ReverseContentDisplay('divRecerca1',3); return false;"
-							href="javascript:ReverseContentDisplay('divRecerca1',3);">CCSG</a></td><td width=".100/3.%"><div id="divRecerca2" class="divRecerca"><div id="divRecercaContent2Close" align="right" style="margin-top:0px;margin-right:0px;">
-							<a onclick="HideContent('divRecerca2'); return false;"
-							   href="javascript:HideContent('divRecerca2')">
-							[X]
-							</a>
-							</div><div id="divRecercaContent2" align="left" style="margin-top:0px;margin-right:0px"><b>Digital&nbsp;Image&nbsp;Consulting</b><br><b>Data&nbsp;Compression</b><br>&nbsp;Lossless&nbsp;and&nbsp;Lossy&nbsp;Coding<br>&nbsp;Multi-dimensional&nbsp;and&nbsp;ROI&nbsp;coding<br>&nbsp;Interactive&nbsp;coding&nbsp;/&nbsp;transmission<br>&nbsp;Rate&nbsp;control&nbsp;techniques<br>&nbsp;Region&nbsp;of&nbsp;Interest&nbsp;Coding<br><b>Standards</b>&nbsp;and&nbsp;<b>Applications</b><br>&nbsp;ISO/IEC&nbsp;JPEG2000<br>&nbsp;CCSDS&nbsp;recommendations<br>&nbsp;Hyperspectral&nbsp;and&nbsp;Medical&nbsp;imaging<br><b>Software&nbsp;Developments</b><br>&nbsp;JPIP,&nbsp;JPEG2000,&nbsp;CCSDS&nbsp;Image&nbsp;Data&nbsp;Compression,&nbsp;Spectral&nbsp;Transform<br>&nbsp;Pairwise&nbsp;Orthogonal&nbsp;Transform,&nbsp;File&nbsp;Format&nbsp;Converter,&nbsp;ieMetrics,&nbsp;...<br><br><br></div><a href="./recerca/publicacionsGiCi.php" target="_blank">Publicacions</a><br>url: <a href="http://gici.uab.es" target="_blank">http://gici.uab.es</a><br></div><a id="divRecercaContent2Link"
-							   onclick="ReverseContentDisplay('divRecerca2',3); return false;"
-							href="javascript:ReverseContentDisplay('divRecerca2',3);">GiCi</a></td><td width=".100/3.%"><div id="divRecerca3" class="divRecerca"><div id="divRecercaContent3Close" align="right" style="margin-top:0px;margin-right:0px;">
-							<a onclick="HideContent('divRecerca3'); return false;"
-							   href="javascript:HideContent('divRecerca3')">
-							[X]
-							</a>
-							</div><div id="divRecercaContent3" align="left" style="margin-top:0px;margin-right:0px"><b>Security</b><br>&nbsp;&nbsp;Security&nbsp;and&nbsp;Privacy<br>&nbsp;&nbsp;Network&nbsp;vulnerabilities<br><b>Mobile&nbsp;Agents</b><br>&nbsp;&nbsp;Itinerary&nbsp;and&nbsp;Code&nbsp;Protection<br>&nbsp;&nbsp;Secure&nbsp;Applications<br><b>Delay&nbsp;Tolerant&nbsp;Networking</b><br>&nbsp;&nbsp;Mobile&nbsp;Agent&nbsp;Based&nbsp;Dynamic&nbsp;Routing<br>&nbsp;&nbsp;Aerospace&nbsp;and&nbsp;Emergency&nbsp;Applications<br>&nbsp;&nbsp;Sensor&nbsp;Networks<br><br><br></div><a href="./recerca/publicacionsSeNDA.php" target="_blank">Publicacions</a><br>url: <a href="http://senda.uab.es" target="_blank">http://senda.uab.es</a><br></div><a id="divRecercaContent3Link"
-							   onclick="ReverseContentDisplay('divRecerca3',3); return false;"
-							href="javascript:ReverseContentDisplay('divRecerca3',3);">SeNDA</a></td></tr>
-			<tr align="left"><td><b>Information coding</b><br>&nbsp;&nbsp;Bent functions<br>&nbsp;&nbsp;Completely Regular Codes<br>&nbsp;&nbsp;Perfect Codes<br>&nbsp;&nbsp;Propelinear Codes<br>&nbsp;&nbsp;Z2Z4-linear Codes<br><b>Distributed storage</b><br>&nbsp;&nbsp;regenerating codes<br>&nbsp;&nbsp;data hiding<br><b>Magma software system</b><br>&nbsp;&nbsp;Algorithms for nonlinear codes<br>&nbsp;&nbsp;Algorithms for Z2Z4-linear codes<br></td><td><b>Digital Image Consulting</b><br><b>Data Compression</b><br>&nbsp;Lossless and Lossy Coding<br>&nbsp;Multi-dimensional and ROI coding<br>&nbsp;Interactive coding&nbsp;/&nbsp;transmission<br><b>Standards</b>&nbsp;and&nbsp;<b>Applications</b><br>&nbsp;ISO/IEC JPEG2000<br>&nbsp;CCSDS recommendations<br>&nbsp;Hyperspectral and Medical imaging<br><b>Software Developments</b><br></td><td><b>Security</b><br>&nbsp;&nbsp;Security and Privacy<br>&nbsp;&nbsp;Network vulnerabilities<br><b>Mobile Agents</b><br>&nbsp;&nbsp;Itinerary and Code Protection<br>&nbsp;&nbsp;Secure Applications<br><b>Delay Tolerant Networking</b><br>&nbsp;&nbsp;Mobile Agent Based Dynamic Routing<br>&nbsp;&nbsp;Aerospace and Emergency Applications<br>&nbsp;&nbsp;Sensor Networks<br></td>			</tr>
-
-		</table>
-
-		</td>
-		</tr>
-
-		<!--</tr>
-	   	<tr valign="top" >
-	</td>
-
-	</tr>-->
-<!--</tr>-->
-
-
-
-</table>
-</td>
-</tr>
-
-<tr> 
-    <td vAlign=bottom align="center" colSpan=2>  
-      <div align="center"> 
-      <HR width="90%" noShade SIZE=1 class="bottom">
-	    <a class="mini" href="../index.php?idioma=2">Home</a> | <a class="mini" href="../info/contactar.php?idioma=2">Contact</a> <!-- | <a class="mini" href="../info/sobre.php?idioma=">--> <!--</a>--> | <a class="mini" href="../info/mapa.php?idioma=2">Web map</a> <br>
-        <font size="1">Dilluns, 20 d'abril de 2015. &copy; 2006, dEIC. 
-		Administrator:  <img src="../inc/email2imageId.php?id=0" alt="E-mail"></font></div> 
-    </td> 
-</tr>
-</table>
-
-
-</body>
-</html>
-oogle.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}
-</script></div></body></html> even Flash movies. You can also output any text, such as XHTML and 
+<h2>What Can PHP Do?</h2>
+<ul>
+	<li>PHP can generate dynamic page content</li>
+	<li>PHP can create, open, read, write, delete, and close files on the server</li>
+	<li>PHP can collect form data</li>
+	<li>PHP can send and receive cookies</li>
+	<li>PHP can add, delete, modify data in your database</li>
+	<li>PHP can be used to control user-access</li>
+	<li>PHP can encrypt data</li>
+</ul>
+<p>With PHP you are not limited to output HTML. You can output images, PDF 
+files, and even Flash movies. You can also output any text, such as XHTML and 
 XML.</p>
 <hr>
 

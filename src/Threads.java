@@ -9,9 +9,8 @@ public class Threads extends Thread {
 	
 	String url;
 	String nom;
-	boolean[]filtres = new boolean[3];
-	boolean existeix = false; 
-
+	boolean[] filtres = new boolean[3];
+	boolean existeix = false;
 	
 	public Threads(String url, boolean[]filtres) {
 		this.url = url;
@@ -43,11 +42,10 @@ public class Threads extends Thread {
 
 	public void downloadURL(InputStream is, FileOutputStream fos, boolean[] filtres) throws IOException {
 		
-			
 			InputStream is2;
 			is2=is;
 			
-			if (filtres[0]==true) {
+			if (filtres[0] == true) {
 				
 				is = new AsciiInputStream(is2);
 			}
@@ -86,20 +84,17 @@ public class Threads extends Thread {
 		//is2 = is;
 		
 		//Fitxer en el que guardarem el contingut
-		 fos = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget/" + nom);
+		 fos = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget2.0/" + nom);
 		 
 		 
 		// TODO Auto-generated method stub
 		if (filtres[0]==false && filtres[1]==false && filtres[2]==false){ //sense filtres
-			
-			
 			existeix=true; 
 		}
 		if (filtres[0]==true && filtres[1]==false && filtres[2]==false){  //filtre ascii
 			existeix=true; 
 		}
 		if (filtres[0]==false && filtres[1]==true && filtres[2]==false){  //filtre zip
-			
 			existeix=true; 
 		}
 		if (filtres[0]==false && filtres[1]==false && filtres[2]==true){  //filtre gzip
@@ -112,7 +107,7 @@ public class Threads extends Thread {
 		}
 		
 		if (existeix) {
-			nom = possarNom(url, filtres);
+			nom = possarNom(url, filtres);//nom.possarNom(url, filtres);
 			downloadURL(is, fos, filtres);
 		}
 		
