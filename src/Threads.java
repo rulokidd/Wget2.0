@@ -52,7 +52,7 @@ public class Threads extends Thread {
 	 * @param filtres, array de booleans amb 3 posicions, -asc, -zip, -gzip.
 	 * @throws IOException, exepcio per si hi ha algun error.
 	 */
-	public void downloadURL(InputStream is, FileOutputStream fos, boolean[] filtres) throws IOException {
+	public void downloadURL(InputStream is, FileOutputStream fos, boolean[] filtres, String nom) throws IOException {
 		
 			InputStream is2;
 			is2=is;
