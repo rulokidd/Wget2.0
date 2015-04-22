@@ -33,13 +33,13 @@ public class Wget {
 		
 		//while (i > 0) {
 
-			if (args[0].equals("-a")) {
+			if (args[2].equals("-a")) {
 				filtres[0]=true; 
 			}
-			if (args[1].equals("-z")) {
+			if (args[3].equals("-z")) {
 				filtres[1]=true; 
 			}
-			if (args[2].equals("-gz")) {
+			if (args[4].equals("-gz")) {
 				filtres[2]=true;
 			}
 			//i--;

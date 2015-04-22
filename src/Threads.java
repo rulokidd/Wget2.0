@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,9 +36,7 @@ public class Threads extends Thread {
 		String nom;
 		
 		nom = url.substring(url.lastIndexOf("/"));
-		//System.out.println(url);
-		//System.out.println("Cojo esta parte "
-		//		+ url.substring(url.lastIndexOf("/")));
+
 		
 		if (filtres[0]==true) {
 			nom = nom + ".asc";
@@ -59,28 +58,25 @@ public class Threads extends Thread {
 	 * @param filtres, array de booleans amb 3 posicions, -asc, -zip, -gzip.
 	 * @throws IOException, exepcio per si hi ha algun error.
 	 */
-	public void downloadURL(InputStream is, FileOutputStream fos, boolean[] filtres, String nom) throws IOException {
+	public void downloadURL(InputStream is, OutputStream os, String nom)  {
 		
-			InputStream is2;
-			is2=is;
 			
-			if (filtres[0] == true) {
 				
-				is = new AsciiInputStream(is2);
-			}
 				int c;	
-				//is depen del flag (boolea) 
-				//El llegim per primer cop i fem el bucle fins al final
 				
-				while ( (c= is.read(/*Array*/)) != -1) {
-					
-					fos.write(c/*Array, 0, c*/);
-					//c = is.read(Array);
-					
+				try {
+					while ( (c= is.read()) != -1) {
+						
+						os.write(c);
+						
+					}
+					is.close();
+					os.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-				//Tanquem connexio i fitxer fos
-				is.close();
-				fos.close();
+				
 				System.out.println("Fitxer " + nom + " s'ha creat correctament");
 			
 		
@@ -95,51 +91,63 @@ public class Threads extends Thread {
 		
 		URL urlStr;
 		InputStream is;
-		//AsciiInputStream is_ascii;
-		//FileOutputStream fos;
-		OutputStream os = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget2.0/" + nom);
 		
+		OutputStream os;
+
 		try {
 			
-		urlStr = new URL(url);
-		
-		
-		is = urlStr.openStream();//cambia per openConnection aixi utilitzarem el getContentType ja que una imatge no es html
-		//is2 = is;
-		
-		//Fitxer en el que guardarem el contingut
-		//fos = new FileOutputStream("/users/rulo13_15/Documents/workspace/Wget2.0/" + nom);
-		 
-		 
-		// TODO Auto-generated method stub
-		if (filtres[0]==false && filtres[1]==false && filtres[2]==false){ //sense filtres
-			existeix=true; 
-		}
-		if (filtres[0]==true && filtres[1]==false && filtres[2]==false){  //filtre ascii
-			existeix=true; 
-		}
-		if (filtres[0]==false && filtres[1]==true && filtres[2]==false){  //filtre zip
-			existeix=true; 
-		}
-		if (filtres[0]==false && filtres[1]==false && filtres[2]==true){  //filtre gzip
+			urlStr = new URL(url);
 			
-			existeix=true; 
-		}
-		if (filtres[0]==true && filtres[1]==true && filtres[2]==true){  //els 3 filtres alhora
 			
-			existeix=true; 
-		}
-		
-		if (existeix) {
-			nom = possarNom(url, filtres);//nom.possarNom(url, filtres);
-			downloadURL(is, os, filtres);
-		}
-		
-		
-	} catch (MalformedURLException e) {
+			is = urlStr.openStream();//cambia per openConnection aixi utilitzarem el getContentType ja que una imatge no es html
+			
+			InputStream is2;
+			is2=is;
+			
+			nom = possarNom(url, filtres);
+			os = new FileOutputStream("/users/rulo13_15"+nom);
+			
+			 
+			 
+			// TODO Auto-generated method stub
+			if (filtres[0]==false && filtres[1]==false && filtres[2]==false){ //sense filtres
+				
+				existeix=true;
+				
+			}
+			if (filtres[0]==true && filtres[1]==false && filtres[2]==false){  //filtre ascii
+				
+				is = new AsciiInputStream(is2);
+				existeix=true; 
+				
+			}
+//			if (filtres[0]==false && filtres[1]==true && filtres[2]==false){  //filtre zip
+//				
+//				existeix=true; 
+//			}
+//			if (filtres[0]==false && filtres[1]==false && filtres[2]==true){  //filtre gzip
+//				
+//				existeix=true; 
+//			}
+			if (filtres[0]==true && filtres[1]==true && filtres[2]==true){  //els 3 filtres alhora
+				
+				is = new AsciiInputStream(is2);
+				existeix=true; 
+			}
+			
+			if (existeix) {
+				
+				downloadURL(is, os, nom);
+			}
+
+			
+		} catch (MalformedURLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }
