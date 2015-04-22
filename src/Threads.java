@@ -37,7 +37,6 @@ public class Threads extends Thread {
 		
 		nom = url.substring(url.lastIndexOf("/"));
 
-		
 		if (filtres[0]==true) {
 			nom = nom + ".asc";
 		}

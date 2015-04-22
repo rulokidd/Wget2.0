@@ -39,7 +39,6 @@ public class AsciiInputStream extends FilterInputStream{
 			}
 			else {
 				while((c=super.read()) != '>');
-					//c=super.read();
 			}		
 		}
 		return c;

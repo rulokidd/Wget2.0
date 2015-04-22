@@ -63,25 +63,14 @@ public class Wget {
 			String url;
 			//int cont = 0;
 			BufferedReader fr = new BufferedReader(new FileReader(
-					"/users/rulo13_15/Documents/workspace/urls.txt"));
+					"/users/rulo13_15/Documents/workspace/urls.txt"));//args[0] primera posicio es el fitxer urls.txt
 			
 			BuscarArgs (args, filtres);
 			
 			while ((url = fr.readLine()) != null) {
-				/*
-				 * Llegim primera linea i fiquem la url a la variable url,
-				 * utilitzem new Wget().downloadURL(url), cont++
-				 */
-
-				//cont++;
 				
-				/*nom = url.substring(url.lastIndexOf("/"));
-				System.out.println(url);
-				System.out.println("Cojo esta parte "
-						+ url.substring(url.lastIndexOf("/")));*/
 				Threads p = new Threads(url, filtres);
 				p.start();
-				// new Threads().downloadURL(url, nom);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
