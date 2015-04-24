@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * 
@@ -17,12 +18,14 @@ public class Threads extends Thread {
 	
 	String url;
 	String nom;
+	int offset;
 	boolean[] filtres = new boolean[3];
 	boolean existeix = false;
 	
-	public Threads(String url, boolean[]filtres) {
+	public Threads(String url, boolean[]filtres, int offset) {
 		this.url = url;
-		this.filtres = filtres; 
+		this.filtres = filtres;
+		this.offset = offset;
 		// TODO Auto-generated constructor stub
 	}
 	/**
@@ -32,19 +35,26 @@ public class Threads extends Thread {
 	 * @param filtres, array de booleans amb 3 posicions, -asc, -zip, -gzip.
 	 * @return nom, retornem el nom del fitxer que es crearˆ
 	 */
-	public String possarNom(String url, boolean[]filtres) {
+	public String possarNom(String url, boolean[]filtres, String type, URLConnection content) {
 		String nom;
 		
 		nom = url.substring(url.lastIndexOf("/"));
+		
+		type = content.getContentType();
+		if (type.contains("text/html")) {
+			nom = nom+".html";
+		}
 
-		if (filtres[0]==true) {
-			nom = nom + ".asc";
+		if (filtres[0]==true && type.contains("text/html")) {
+			nom = nom + offset + ".asc";
+		} else {
+			nom = nom + offset;
 		}
 		if (filtres[1]==true) {
-			nom = nom + ".zip";
+			nom = nom + offset +  ".zip";
 		}
 		if (filtres[2]==true) {
-			nom = nom + ".gz";
+			nom = nom + offset + ".gz";
 		}
 		
 		return nom;
@@ -89,6 +99,7 @@ public class Threads extends Thread {
 	public void run() {
 		
 		URL urlStr;
+//		URLConnection content;
 		InputStream is;
 		
 		OutputStream os;
@@ -96,44 +107,41 @@ public class Threads extends Thread {
 		try {
 			
 			urlStr = new URL(url);
-			
+			URLConnection content = urlStr.openConnection();
 			
 			is = urlStr.openStream();//cambia per openConnection aixi utilitzarem el getContentType ja que una imatge no es html
 			
+			String type = content.getContentType();
+			nom = possarNom(url, filtres, type, content);
+
+
 			InputStream is2;
 			is2=is;
 			
-			nom = possarNom(url, filtres);
+			
 			os = new FileOutputStream("/users/rulo13_15"+nom);
 			
 			 
 			 
 			// TODO Auto-generated method stub
-			if (filtres[0]==false && filtres[1]==false && filtres[2]==false){ //sense filtres
-				
-				existeix=true;
-				
-			}
-			if (filtres[0]==true && filtres[1]==false && filtres[2]==false){  //filtre ascii
-				
-				is = new AsciiInputStream(is2);
-				existeix=true; 
-				
-			}
-//			if (filtres[0]==false && filtres[1]==true && filtres[2]==false){  //filtre zip
-//				
-//				existeix=true; 
-//			}
-//			if (filtres[0]==false && filtres[1]==false && filtres[2]==true){  //filtre gzip
-//				
-//				existeix=true; 
-//			}
-			if (filtres[0]==true && filtres[1]==true && filtres[2]==true){  //els 3 filtres alhora
-				
-				is = new AsciiInputStream(is2);
-				existeix=true; 
-			}
 			
+			if (filtres[0]==true && type.contains("text/html"))			//filtre ascii
+			{  
+				
+				is = new AsciiInputStream(is2);
+				existeix = true;
+				
+			}
+			if ( filtres[1]==true){  //filtre zip
+			
+				existeix=true; 
+			}
+			if ( filtres[2]==true){  //filtre gzip
+			
+					existeix=true; 
+			}
+
+
 			if (existeix) {
 				
 				downloadURL(is, os, nom);

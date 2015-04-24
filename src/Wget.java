@@ -61,7 +61,7 @@ public class Wget {
 
 		try {
 			String url;
-			//int cont = 0;
+			int offset = 0;
 			BufferedReader fr = new BufferedReader(new FileReader(
 					"/users/rulo13_15/Documents/workspace/urls.txt"));//args[0] primera posicio es el fitxer urls.txt
 			
@@ -69,7 +69,8 @@ public class Wget {
 			
 			while ((url = fr.readLine()) != null) {
 				
-				Threads p = new Threads(url, filtres);
+				offset++;
+				Threads p = new Threads(url, filtres, offset);
 				p.start();
 			}
 		} catch (IOException e) {
