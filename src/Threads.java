@@ -49,12 +49,18 @@ public class Threads extends Thread {
 
 		if (filtres[0]==true && type.contains("text/html")) {
 			nom = nom + ".asc";
-		} 
+		} else {
+			System.out.println("no afegim filtre ascii");
+		}
 		if (filtres[1]==true) {
 			nom = nom + ".zip";
+		} else {
+			System.out.println("no afegim filtre zip");
 		}
 		if (filtres[2]==true) {
 			nom = nom + ".gz";
+		} else {
+			System.out.println("no afegim filtre gzip");
 		}
 		
 		return nom;	
@@ -113,6 +119,9 @@ public class Threads extends Thread {
 				is = new AsciiInputStream(is2);
 				existeix = true;
 				
+			} else {
+				System.out.println("error a–adiendo filtro ascii");
+				existeix=false;
 			}
 			if ( filtres[1]==true) {  //filtre zip
 			

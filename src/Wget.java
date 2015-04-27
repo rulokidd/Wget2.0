@@ -21,6 +21,12 @@ public class Wget {
 	 */
 	public static void BuscarArgs (String[] args, boolean[] filtres) {		
 
+		int i=0;
+		while (args[i].length() > 0) {
+			System.out.println(args[i]);
+			System.out.println(i);
+			i++;
+			}
 			if (args[2].equals("-a")) {
 				filtres[0]=true; 
 			}
@@ -30,6 +36,7 @@ public class Wget {
 			if (args[4].equals("-gz")) {
 				filtres[2]=true;
 			}
+			
 	}
 	/**
 	 * El metode main() llegira les urls, de l'arxiu urls.txt, buscara els filtres 
