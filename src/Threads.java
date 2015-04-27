@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,6 +5,8 @@ import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.zip.GZIPOutputStream;
+import java.util.zip.ZipOutputStream;
 
 /**
  * 
@@ -26,7 +27,6 @@ public class Threads extends Thread {
 		this.url = url;
 		this.filtres = filtres;
 		this.offset = offset;
-		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * La funcio possarNom de tipus String, retorna el nom del fitxer
@@ -44,21 +44,19 @@ public class Threads extends Thread {
 		if (type.contains("text/html")) {
 			nom = nom+".html";
 		}
+		nom=nom+offset;
 
 		if (filtres[0]==true && type.contains("text/html")) {
-			nom = nom + offset + ".asc";
-		} else {
-			nom = nom + offset;
-		}
+			nom = nom + ".asc";
+		} 
 		if (filtres[1]==true) {
-			nom = nom + offset +  ".zip";
+			nom = nom + ".zip";
 		}
 		if (filtres[2]==true) {
-			nom = nom + offset + ".gz";
+			nom = nom + ".gz";
 		}
 		
-		return nom;
-		
+		return nom;	
 	}
 	/**
 	 * El metode dowloadURL tal i com indica el seu nom, llegira d'un fitxer txt les urls a baixar.
@@ -67,10 +65,7 @@ public class Threads extends Thread {
 	 * @param filtres, array de booleans amb 3 posicions, -asc, -zip, -gzip.
 	 * @throws IOException, exepcio per si hi ha algun error.
 	 */
-	public void downloadURL(InputStream is, OutputStream os, String nom)  {
-		
-			
-				
+	public void downloadURL(InputStream is, OutputStream os, String nom)  {		
 				int c;	
 				
 				try {
@@ -86,9 +81,7 @@ public class Threads extends Thread {
 					e.printStackTrace();
 				}
 				
-				System.out.println("Fitxer " + nom + " s'ha creat correctament");
-			
-		
+				System.out.println("Fitxer " + nom + " s'ha creat correctament");		
 	}
 	/**
 	 * Metode heredat de la extensio de Thread, una vegada s'hagi creat un thread aquest mirara
@@ -99,7 +92,6 @@ public class Threads extends Thread {
 	public void run() {
 		
 		URL urlStr;
-//		URLConnection content;
 		InputStream is;
 		
 		OutputStream os;
@@ -110,44 +102,34 @@ public class Threads extends Thread {
 			URLConnection content = urlStr.openConnection();
 			
 			is = urlStr.openStream();//cambia per openConnection aixi utilitzarem el getContentType ja que una imatge no es html
+			os = new FileOutputStream("/users/rulo13_15/Desktop/tmp/"+nom);
 			
 			String type = content.getContentType();
 			nom = possarNom(url, filtres, type, content);
 
-
 			InputStream is2;
 			is2=is;
-			
-			
-			os = new FileOutputStream("/users/rulo13_15"+nom);
-			
-			 
-			 
-			// TODO Auto-generated method stub
-			
-			if (filtres[0]==true && type.contains("text/html"))			//filtre ascii
-			{  
+
+			if (filtres[0]==true && type.contains("text/html")) {			//filtre ascii 
 				
 				is = new AsciiInputStream(is2);
 				existeix = true;
 				
 			}
-			if ( filtres[1]==true){  //filtre zip
+			if ( filtres[1]==true) {  //filtre zip
 			
 				existeix=true; 
+				ZipOutputStream zos = new ZipOutputStream(os);
 			}
-			if ( filtres[2]==true){  //filtre gzip
+			if ( filtres[2]==true) {  //filtre gzip
 			
-					existeix=true; 
+				existeix=true; 
+				GZIPOutputStream gzos = new GZIPOutputStream(zos);
 			}
-
-
 			if (existeix) {
 				
 				downloadURL(is, os, nom);
 			}
-
-			
 		} catch (MalformedURLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -158,4 +140,3 @@ public class Threads extends Thread {
 		}
 	}
 }
-
