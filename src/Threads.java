@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.zip.GZIPOutputStream;
+import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
@@ -102,7 +103,7 @@ public class Threads extends Thread {
 			URLConnection content = urlStr.openConnection();
 			
 			is = urlStr.openStream();//cambia per openConnection aixi utilitzarem el getContentType ja que una imatge no es html
-			os = new FileOutputStream("/users/rulo13_15/Desktop/tmp/"+nom);
+			os = new FileOutputStream("/users/rulo13_15/" + nom);
 			
 			String type = content.getContentType();
 			nom = possarNom(url, filtres, type, content);
@@ -110,7 +111,7 @@ public class Threads extends Thread {
 			InputStream is2;
 			is2=is;
 
-			if (filtres[0]==true && type.contains("text/html")) {			//filtre ascii 
+			if (filtres[0]==true && type.contains("text/html")) { //filtre ascii 
 				
 				is = new AsciiInputStream(is2);
 				existeix = true;
@@ -119,12 +120,14 @@ public class Threads extends Thread {
 			if ( filtres[1]==true) {  //filtre zip
 			
 				existeix=true; 
-				ZipOutputStream zos = new ZipOutputStream(os);
+				os = new ZipOutputStream(os);
+				((ZipOutputStream)os).putNextEntry(new ZipEntry(nom));
+
 			}
 			if ( filtres[2]==true) {  //filtre gzip
 			
 				existeix=true; 
-				GZIPOutputStream gzos = new GZIPOutputStream(zos);
+				os = new GZIPOutputStream(os);
 			}
 			if (existeix) {
 				
