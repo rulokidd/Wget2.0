@@ -43,7 +43,7 @@ public class Threads extends Thread {
 		
 		type = content.getContentType();
 		if (type.contains("text/html")) {
-			nom = nom+".html";
+			nom = nom +".html";
 		}
 		nom=nom+offset;
 
@@ -67,22 +67,19 @@ public class Threads extends Thread {
 	 * @throws IOException, exepcio per si hi ha algun error.
 	 */
 	public void downloadURL(InputStream is, OutputStream os, String nom)  {		
-				int c;	
+		int c;	
 				
-				try {
-					while ( (c= is.read()) != -1) {
-						
-						os.write(c);
-						
-					}
-					is.close();
-					os.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+		try {
+				while ( (c= is.read()) != -1) {						
+					os.write(c);
 				}
-				
-				System.out.println("Fitxer " + nom + " s'ha creat correctament");		
+				is.close();
+				os.close();
+		} catch (IOException e) {
+				// TODO Auto-generated catch block
+					e.printStackTrace();			
+		}
+		System.out.println("Fitxer " + nom + " s'ha creat correctament");		
 	}
 	/**
 	 * Metode heredat de la extensio de Thread, una vegada s'hagi creat un thread aquest mirara
@@ -121,13 +118,15 @@ public class Threads extends Thread {
 			
 				existeix=true; 
 				os = new ZipOutputStream(os);
-				((ZipOutputStream)os).putNextEntry(new ZipEntry(nom));
+				((ZipOutputStream) os).putNextEntry(new ZipEntry(nom));
+				System.out.println("Hem aplicat el filtre zip");
 
 			}
 			if ( filtres[2]==true) {  //filtre gzip
 			
 				existeix=true; 
 				os = new GZIPOutputStream(os);
+				System.out.println("Hem aplicat el filtre gzip");
 			}
 			if (existeix) {
 				
