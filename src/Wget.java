@@ -21,21 +21,18 @@ public class Wget {
 	 */
 	public static void BuscarArgs (String[] args, boolean[] filtres) {		
 
-		int i=0;
-		while (args[i].length() > 0) {
-			System.out.println(args[i]);
-			System.out.println(i);
-			i++;
-			}
-			if (args[2].equals("-a")) {
+		for (int i=0; i<args.length; i++) {
+			
+			if (args[i].equals("-a")) {
 				filtres[0]=true; 
 			}
-			if (args[3].equals("-z")) {
+			if (args[i].equals("-z")) {
 				filtres[1]=true;
 			}
-			if (args[4].equals("-gz")) {
+			if (args[i].equals("-gz")) {
 				filtres[2]=true;
 			}
+		}
 			
 	}
 	/**

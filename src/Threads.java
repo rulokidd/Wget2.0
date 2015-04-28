@@ -19,10 +19,10 @@ import java.util.zip.ZipOutputStream;
 public class Threads extends Thread {
 	
 	String url;
-	String nom;
+	String nom, nomOriginal;
 	int offset;
 	boolean[] filtres = new boolean[3];
-	boolean existeix = false;
+	//boolean existeix = false;
 	
 	public Threads(String url, boolean[]filtres, int offset) {
 		this.url = url;
@@ -38,26 +38,37 @@ public class Threads extends Thread {
 	 */
 	public String possarNom(String url, boolean[]filtres, String type, URLConnection content) {
 		String nom;
+		System.out.println("entrem al posar nom "+ url);
+		nom=url;
 		
-		nom = url.substring(url.lastIndexOf("/"));
+		
+//		nom = url.substring(url.lastIndexOf("/"));
 		
 		type = content.getContentType();
-		if (type.contains("text/html")) {
-			nom = nom +".html";
+		if (nom=="") {
+			
+			nom = "index"+offset +".html";
+		}else{
+			
+			nom = url.substring(url.lastIndexOf("/")+1);
+			nom = nom+offset;
 		}
-		nom=nom+offset;
-
+		
+		System.out.println(nom);
 		if (filtres[0]==true && type.contains("text/html")) {
+			
 			nom = nom + ".asc";
-		} else {
-			System.out.println("no afegim filtre ascii");
-		}
+		} 
+		nomOriginal=nom;
+		
 		if (filtres[1]==true) {
+			System.out.println("entrem al nom zip");
 			nom = nom + ".zip";
 		} else {
 			System.out.println("no afegim filtre zip");
 		}
 		if (filtres[2]==true) {
+			System.out.println("entrem al nom gz");
 			nom = nom + ".gz";
 		} else {
 			System.out.println("no afegim filtre gzip");
@@ -106,41 +117,40 @@ public class Threads extends Thread {
 			URLConnection content = urlStr.openConnection();
 			
 			is = urlStr.openStream();//cambia per openConnection aixi utilitzarem el getContentType ja que una imatge no es html
-			os = new FileOutputStream("/users/rulo13_15/" + nom);
 			
 			String type = content.getContentType();
-			nom = possarNom(url, filtres, type, content);
-
+			nom = possarNom(urlStr.getFile(), filtres, type, content);
+			System.out.println("abans del download "+nom);
 			InputStream is2;
 			is2=is;
+			os = new FileOutputStream("/users/rulo13_15/" + nom);
 
 			if (filtres[0]==true && type.contains("text/html")) { //filtre ascii 
 				
 				is = new AsciiInputStream(is2);
-				existeix = true;
+				//existeix = true;
 				
 			} else {
 				System.out.println("error a–adiendo filtro ascii");
-				existeix=false;
 			}
-			if ( filtres[1]==true) {  //filtre zip
-			
-				existeix=true; 
-				os = new ZipOutputStream(os);
-				((ZipOutputStream) os).putNextEntry(new ZipEntry(nom));
-				System.out.println("Hem aplicat el filtre zip");
-
-			}
+	
 			if ( filtres[2]==true) {  //filtre gzip
 			
-				existeix=true; 
+				//existeix=true; 
 				os = new GZIPOutputStream(os);
 				System.out.println("Hem aplicat el filtre gzip");
 			}
-			if (existeix) {
+			if ( filtres[1]==true) {  //filtre zip
 				
-				downloadURL(is, os, nom);
-			}
+				//existeix=true; 
+				
+				os = new ZipOutputStream(os);
+				((ZipOutputStream) os).putNextEntry(new ZipEntry(nomOriginal));
+				System.out.println("Hem aplicat el filtre zip");
+
+			}	
+			downloadURL(is, os, nom);
+			
 		} catch (MalformedURLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
