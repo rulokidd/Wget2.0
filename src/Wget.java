@@ -12,8 +12,8 @@ import java.io.IOException;
 public class Wget {
 
 	/**
-	 * El metode BuscarArgs, mirara a l'Array d'strings args els filtres seleccionats
-	 * i els activara si els troba.
+	 * El metode BuscarArgs, mirara a l'Array d'strings, args, els filtres seleccionats
+	 * i els activara si els troba. Si estan activats creara l'arxiu adient.
 	 * @param args, array el qual podrem mirar quin tipus de filtre es vol
 	 * a la url a descarregar.
 	 * @param filtres, array de booleans que s'activara quan un filtre estigui actiu.
